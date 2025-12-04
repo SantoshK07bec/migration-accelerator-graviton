@@ -66,7 +66,7 @@ This solution is designed for:
 
 This solution uses AWS Batch with ECS on Graviton3 EC2 instances to provide event-driven, serverless SBOM analysis. The architecture follows AWS Well-Architected Framework principles for security, reliability, and cost optimization.
 
-![Architecture Diagram](images/architecture.png)
+![Architecture Diagram](images/graviton-validator.jpg)
 
 For detailed architecture information, see [Architecture Documentation](docs/ARCHITECTURE_AND_WORKFLOWS.md).
 
