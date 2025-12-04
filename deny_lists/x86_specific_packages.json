@@ -1,0 +1,12 @@
+{
+  "$schema": "../schemas/deny_list_schema.json",
+  "deny_list": [
+    {
+      "name": "intel-mkl",
+      "aliases": ["mkl", "intel-math-kernel-library"],
+      "reason": "Intel Math Kernel Library is x86-specific and not available for ARM64",
+      "minimum_supported_version": null,
+      "recommended_alternative": "openblas"
+    }
+  ]
+}

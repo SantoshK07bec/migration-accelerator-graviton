@@ -1,0 +1,131 @@
+{
+  "io.netty:netty-transport-native-epoll": {
+    "compatibility": "version_dependent",
+    "problematic_versions": ["<4.1.46.Final"],
+    "minimum_supported_version": "4.1.46.Final",
+    "recommended_version": "4.1.77.Final",
+    "native_code": true,
+    "arm_classifiers": ["linux-aarch_64", "linux-arm_64"],
+    "issue_description": "Native epoll libraries require ARM-specific builds",
+    "upgrade_notes": "Upgrade to 4.1.46.Final or later for ARM support"
+  },
+  "org.xerial:sqlite-jdbc": {
+    "compatibility": "version_dependent",
+    "problematic_versions": ["<3.34.0"],
+    "minimum_supported_version": "3.34.0",
+    "recommended_version": "3.40.0.0",
+    "native_code": true,
+    "arm_classifiers": ["linux-aarch64", "linux-arm"],
+    "issue_description": "Contains native SQLite libraries that need ARM-specific builds",
+    "upgrade_notes": "Upgrade to 3.34.0 or later for ARM support"
+  },
+  "net.java.dev.jna:jna": {
+    "compatibility": "version_dependent",
+    "problematic_versions": ["<5.5.0"],
+    "minimum_supported_version": "5.5.0",
+    "recommended_version": "5.12.1",
+    "native_code": true,
+    "issue_description": "JNA provides Java access to native libraries, requires ARM-compatible native components",
+    "upgrade_notes": "Upgrade to 5.5.0 or later for ARM support"
+  },
+  "org.rocksdb:rocksdbjni": {
+    "compatibility": "version_dependent",
+    "problematic_versions": ["<6.15.2"],
+    "minimum_supported_version": "6.15.2",
+    "recommended_version": "7.7.3",
+    "native_code": true,
+    "arm_classifiers": ["linux-aarch64", "linux-arm64"],
+    "issue_description": "RocksDB JNI bindings require ARM-compatible native libraries",
+    "upgrade_notes": "Upgrade to 6.15.2 or later for ARM support"
+  },
+  "org.lwjgl:lwjgl": {
+    "compatibility": "version_dependent",
+    "problematic_versions": ["<3.3.0"],
+    "minimum_supported_version": "3.3.0",
+    "recommended_version": "3.3.2",
+    "native_code": true,
+    "arm_classifiers": ["natives-linux-arm64", "natives-linux-arm32"],
+    "issue_description": "Lightweight Java Game Library uses native code that needs ARM support",
+    "upgrade_notes": "Upgrade to 3.3.0 or later for ARM support"
+  },
+  "com.github.luben:zstd-jni": {
+    "compatibility": "version_dependent",
+    "problematic_versions": ["<1.5.0-4"],
+    "minimum_supported_version": "1.5.0-4",
+    "recommended_version": "1.5.2-5",
+    "native_code": true,
+    "arm_classifiers": ["linux-aarch64", "linux-arm64"],
+    "issue_description": "JNI bindings to Zstandard compression library require ARM-compatible builds",
+    "upgrade_notes": "Upgrade to 1.5.0-4 or later for ARM support"
+  },
+  "org.lz4:lz4-java": {
+    "compatibility": "version_dependent",
+    "problematic_versions": ["<1.8.0"],
+    "minimum_supported_version": "1.8.0",
+    "recommended_version": "1.8.0",
+    "native_code": true,
+    "arm_classifiers": ["linux-aarch64", "linux-arm64"],
+    "issue_description": "LZ4 compression algorithm implementation with JNI bindings needs ARM support",
+    "upgrade_notes": "Upgrade to 1.8.0 or later for ARM support"
+  },
+  "org.apache.hadoop:hadoop-common": {
+    "compatibility": "version_dependent",
+    "problematic_versions": ["<3.3.0"],
+    "minimum_supported_version": "3.3.0",
+    "recommended_version": "3.3.4",
+    "native_code": true,
+    "endianness_sensitive": true,
+    "memory_alignment_sensitive": true,
+    "issue_description": "Hadoop native libraries need ARM-specific builds and may have endianness/alignment issues",
+    "upgrade_notes": "Upgrade to 3.3.0 or later and test thoroughly on ARM"
+  },
+  "org.apache.arrow:arrow-vector": {
+    "compatibility": "version_dependent",
+    "problematic_versions": ["<5.0.0"],
+    "minimum_supported_version": "5.0.0",
+    "recommended_version": "10.0.1",
+    "native_code": true,
+    "endianness_sensitive": true,
+    "memory_alignment_sensitive": true,
+    "issue_description": "Arrow memory management uses native code that needs ARM support",
+    "upgrade_notes": "Upgrade to 5.0.0 or later for ARM support"
+  },
+  "org.bytedeco:javacpp": {
+    "compatibility": "version_dependent",
+    "problematic_versions": ["<1.5.5"],
+    "minimum_supported_version": "1.5.5",
+    "recommended_version": "1.5.8",
+    "native_code": true,
+    "memory_alignment_sensitive": true,
+    "arm_classifiers": ["linux-arm64", "linux-armhf"],
+    "issue_description": "JavaCPP provides native C++ integration that requires ARM-specific builds",
+    "upgrade_notes": "Upgrade to 1.5.5 or later for ARM support"
+  },
+  "com.github.jnr:jnr-ffi": {
+    "compatibility": "version_dependent",
+    "problematic_versions": ["<2.2.0"],
+    "minimum_supported_version": "2.2.0",
+    "recommended_version": "2.2.13",
+    "native_code": true,
+    "issue_description": "Uses native code for FFI that requires ARM-specific builds",
+    "upgrade_notes": "Upgrade to 2.2.0 or later for ARM support"
+  },
+  "org.apache.hadoop:hadoop-native": {
+    "compatibility": "version_dependent",
+    "problematic_versions": ["<3.3.0"],
+    "minimum_supported_version": "3.3.0",
+    "recommended_version": "3.3.4",
+    "native_code": true,
+    "issue_description": "Hadoop native libraries need ARM-specific builds",
+    "upgrade_notes": "Upgrade to 3.3.0 or later for ARM support"
+  },
+  "io.netty:netty-transport-native-unix-common": {
+    "compatibility": "version_dependent",
+    "problematic_versions": ["<4.1.46.Final"],
+    "minimum_supported_version": "4.1.46.Final",
+    "recommended_version": "4.1.77.Final",
+    "native_code": true,
+    "issue_description": "Unix-specific native transport libraries need ARM support",
+    "upgrade_notes": "Upgrade to 4.1.46.Final or later for ARM support"
+  }
+}

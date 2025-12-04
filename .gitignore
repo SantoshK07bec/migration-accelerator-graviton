@@ -75,3 +75,33 @@ APG Content Guidelines.pdf
 
 #ASH scan
 .ash/
+
+
+.terraform/
+.terraform.lock.hcl
+tfplan
+*.zip
+packaged/
+
+# OS files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Backup files
+*.bak
+*.backup
+*~
+
+# Security scan reports
+scan-report-*/
+.secrets.baseline
+
+# Custom
+codepipeline_trigger.zip
+TODO.md
+dummy-source-corrected.zip

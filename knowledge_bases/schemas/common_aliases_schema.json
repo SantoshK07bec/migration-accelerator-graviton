@@ -1,0 +1,34 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Common Aliases Schema",
+  "description": "Schema for persistent SBOM component name aliases",
+  "type": "object",
+  "properties": {
+    "$schema": {
+      "type": "string"
+    },
+    "metadata": {
+      "type": "object",
+      "properties": {
+        "name": {"type": "string"},
+        "description": {"type": "string"},
+        "version": {"type": "string"},
+        "created_date": {"type": "string"},
+        "purpose": {"type": "string"}
+      },
+      "required": ["name", "description", "version"]
+    },
+    "aliases": {
+      "type": "object",
+      "patternProperties": {
+        "^[a-zA-Z0-9_.-]+$": {
+          "type": "string",
+          "description": "Target package name in OS knowledge base"
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "required": ["metadata", "aliases"],
+  "additionalProperties": false
+}
