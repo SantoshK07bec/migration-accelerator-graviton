@@ -1,0 +1,57 @@
+---
+- name: Graviton Discovery Direct Execution
+  hosts: all
+  become: yes
+  vars:
+    local_output_dir: "graviton-discovery-{{ ansible_date_time.date }}-{{ ansible_date_time.hour }}{{ ansible_date_time.minute }}{{ ansible_date_time.second }}"
+    
+  tasks:
+    - name: Install required packages (RHEL/CentOS/Amazon Linux)
+      yum:
+        name: ['jq', 'curl']
+        state: present
+      when: ansible_os_family == "RedHat"
+      
+    - name: Install required packages (Ubuntu/Debian)
+      apt:
+        name: ['jq', 'curl']
+        state: present
+        update_cache: yes
+      when: ansible_os_family == "Debian"
+      
+    - name: Create working directory
+      file:
+        path: /tmp/graviton-discovery
+        state: directory
+        mode: '0755'
+        
+    - name: Copy discovery script to target
+      copy:
+        src: ./app_identifier.sh
+        dest: /tmp/graviton-discovery/app_identifier.sh
+        mode: '0755'
+        
+    - name: Execute discovery script
+      shell: |
+        cd /tmp/graviton-discovery
+        ./app_identifier.sh "{{ ansible_hostname }}-{{ ansible_date_time.epoch }}.sbom.json"
+      register: discovery_result
+      
+    - name: Create local output directory
+      file:
+        path: "{{ local_output_dir }}"
+        state: directory
+        mode: '0755'
+      delegate_to: localhost
+      run_once: true
+      
+    - name: Download SBOM file to control machine
+      fetch:
+        src: "/tmp/graviton-discovery/{{ ansible_hostname }}-{{ ansible_date_time.epoch }}.sbom.json"
+        dest: "{{ local_output_dir }}/"
+        flat: yes
+        
+    - name: Cleanup working directory
+      file:
+        path: /tmp/graviton-discovery
+        state: absent

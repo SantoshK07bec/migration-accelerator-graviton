@@ -1,0 +1,361 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: 'Graviton Migration Fleet Discovery - SSM Document and S3 infrastructure for collecting application data from EC2 instances'
+
+Parameters:
+  BucketPrefix:
+    Type: String
+    Default: 'graviton-discovery'
+    Description: 'S3 prefix for organizing SBOM files'
+
+Resources:
+  # S3 Bucket for access logs
+  # Note: Logging bucket does not log its own access (AWS best practice to avoid circular dependency)
+  # checkov:skip=CKV_AWS_18:Logging bucket does not log itself to avoid circular dependency
+  # checkov:skip=CKV_AWS_21:Versioning not required for temporary discovery project
+  # cfn_nag: W35 - Logging bucket does not require access logging (dedicated logging bucket)
+  # cfn_nag: W51 - Versioning not required for temporary discovery project
+  LoggingBucket:
+    Type: AWS::S3::Bucket
+    UpdateReplacePolicy: Retain
+    Metadata:
+      checkov:
+        skip:
+          - id: CKV_AWS_18
+            comment: "Logging bucket does not log itself to avoid circular dependency - AWS best practice"
+          - id: CKV_AWS_21
+            comment: "Versioning not required for temporary discovery project with 90-day lifecycle"
+      cfn_nag:
+        rules_to_suppress:
+          - id: W35
+            reason: "Logging bucket does not require access logging (dedicated logging bucket)"
+          - id: W51
+            reason: "Versioning not required for temporary discovery project"
+    Properties:
+      BucketEncryption:
+        ServerSideEncryptionConfiguration:
+          - ServerSideEncryptionByDefault:
+              SSEAlgorithm: AES256
+      PublicAccessBlockConfiguration:
+        BlockPublicAcls: true
+        BlockPublicPolicy: true
+        IgnorePublicAcls: true
+        RestrictPublicBuckets: true
+      LifecycleConfiguration:
+        Rules:
+          - Id: DeleteOldLogs
+            Status: Enabled
+            ExpirationInDays: 90
+
+  # Bucket Policy to enforce HTTPS for LoggingBucket
+  LoggingBucketPolicy:
+    Type: AWS::S3::BucketPolicy
+    Properties:
+      Bucket: !Ref LoggingBucket
+      PolicyDocument:
+        Statement:
+          - Sid: DenyInsecureTransport
+            Effect: Deny
+            Principal: '*'
+            Action: 's3:*'
+            Resource:
+              - !GetAtt LoggingBucket.Arn
+              - !Sub '${LoggingBucket.Arn}/*'
+            Condition:
+              Bool:
+                aws:SecureTransport: false
+
+  # S3 Bucket for storing scripts and results
+  # checkov:skip=CKV_AWS_21:Versioning not required for temporary discovery project
+  DiscoveryBucket:
+    Type: AWS::S3::Bucket
+    UpdateReplacePolicy: Retain
+    DependsOn: LoggingBucket
+    Metadata:
+      checkov:
+        skip:
+          - id: CKV_AWS_21
+            comment: "Versioning not required for temporary discovery project with 90-day lifecycle"
+      cfn_nag:
+        rules_to_suppress:
+          - id: W51
+            reason: "Versioning not required for temporary discovery project"
+    Properties:
+      BucketEncryption:
+        ServerSideEncryptionConfiguration:
+          - ServerSideEncryptionByDefault:
+              SSEAlgorithm: AES256
+      PublicAccessBlockConfiguration:
+        BlockPublicAcls: true
+        BlockPublicPolicy: true
+        IgnorePublicAcls: true
+        RestrictPublicBuckets: true
+      LoggingConfiguration:
+        DestinationBucketName: !Ref LoggingBucket
+        LogFilePrefix: discovery-bucket-logs/
+      LifecycleConfiguration:
+        Rules:
+          - Id: DeleteOldFiles
+            Status: Enabled
+            ExpirationInDays: 90
+
+  # Bucket Policy to enforce HTTPS for DiscoveryBucket
+  DiscoveryBucketPolicy:
+    Type: AWS::S3::BucketPolicy
+    Properties:
+      Bucket: !Ref DiscoveryBucket
+      PolicyDocument:
+        Statement:
+          - Sid: DenyInsecureTransport
+            Effect: Deny
+            Principal: '*'
+            Action: 's3:*'
+            Resource:
+              - !GetAtt DiscoveryBucket.Arn
+              - !Sub '${DiscoveryBucket.Arn}/*'
+            Condition:
+              Bool:
+                aws:SecureTransport: false
+
+  # SSM Document for Graviton Discovery
+  GravitonDiscoveryDocument:
+    Type: AWS::SSM::Document
+    Properties:
+      DocumentType: Command
+      DocumentFormat: YAML
+      Content:
+        schemaVersion: '2.2'
+        description: 'Graviton Migration Fleet Discovery - Collects application and system information'
+        parameters:
+          s3Bucket:
+            type: String
+            description: 'S3 bucket to upload results'
+            default: !Ref DiscoveryBucket
+          s3Prefix:
+            type: String
+            description: 'S3 prefix for organizing files'
+            default: !Ref BucketPrefix
+          logLevel:
+            type: String
+            description: 'Logging level for the script'
+            default: 'INFO'
+            allowedValues:
+              - DEBUG
+              - INFO
+              - WARNING
+              - ERROR
+        mainSteps:
+          - action: aws:runShellScript
+            name: installDependencies
+            description: 'Install required dependencies'
+            inputs:
+              timeoutSeconds: '300'
+              runCommand:
+                - |
+                  #!/bin/bash
+                  set -e
+
+                  echo "Checking and installing dependencies..."
+                  
+                  # Check required commands
+                  MISSING_PACKAGES=()
+                  
+                  if ! command -v jq >/dev/null 2>&1; then
+                      echo "jq not found, will install"
+                      MISSING_PACKAGES+=("jq")
+                  else
+                      echo "jq already installed: $(jq --version)"
+                  fi
+                  
+                  if ! command -v curl >/dev/null 2>&1; then
+                      echo "curl not found, will install"
+                      MISSING_PACKAGES+=("curl")
+                  else
+                      echo "curl already installed: $(curl --version | head -1)"
+                  fi
+                  
+                  # Install missing packages if any
+                  if [ ${#MISSING_PACKAGES[@]} -eq 0 ]; then
+                      echo "All required dependencies are already installed"
+                  else
+                      echo "Installing missing packages: ${MISSING_PACKAGES[*]}"
+                      
+                      if command -v yum >/dev/null 2>&1; then
+                          # RHEL/CentOS/Amazon Linux
+                          yum update -y
+                          yum install -y "${MISSING_PACKAGES[@]}"
+                      elif command -v apt-get >/dev/null 2>&1; then
+                          # Ubuntu/Debian
+                          apt-get update -y
+                          apt-get install -y "${MISSING_PACKAGES[@]}"
+                      else
+                          echo "Unsupported package manager"
+                          exit 1
+                      fi
+                      
+                      echo "Package installation completed"
+                  fi
+                  
+                  echo "Dependencies installed successfully"
+
+          - action: aws:runShellScript
+            name: downloadAndExecuteScript
+            description: 'Download and execute the app_identifier.sh script'
+            inputs:
+              timeoutSeconds: '600'
+              runCommand:
+                - |
+                  #!/bin/bash
+                  set -e
+                  set -x
+                  
+                  S3_BUCKET="{{ s3Bucket }}"
+                  S3_PREFIX="{{ s3Prefix }}"
+                  LOG_LEVEL="{{ logLevel }}"
+                  
+                  # Get IMDSv2 token
+                  TOKEN=$(curl -X PUT "http://169.254.169.254/latest/api/token" \
+                      -H "X-aws-ec2-metadata-token-ttl-seconds: 21600" \
+                      -s --max-time 5)
+                  
+                  if [[ -z "$TOKEN" ]]; then
+                      echo "Failed to get IMDSv2 token, falling back to IMDSv1"
+                      INSTANCE_ID=$(curl -s --max-time 5 http://169.254.169.254/latest/meta-data/instance-id)
+                      REGION=$(curl -s --max-time 5 http://169.254.169.254/latest/meta-data/placement/availability-zone | sed 's/[a-z]$//')
+                  else
+                      echo "Using IMDSv2 for metadata access"
+                      INSTANCE_ID=$(curl -H "X-aws-ec2-metadata-token: $TOKEN" \
+                          -s --max-time 5 http://169.254.169.254/latest/meta-data/instance-id)
+                      REGION=$(curl -H "X-aws-ec2-metadata-token: $TOKEN" \
+                          -s --max-time 5 http://169.254.169.254/latest/meta-data/placement/region)
+                  fi
+                  
+                  HOSTNAME=$(hostname)
+                  TIMESTAMP=$(date +%Y%m%d-%H%M%S)
+                  
+                  # Validate region
+                  if [[ -z "$REGION" ]]; then
+                      echo "Failed to detect region, using default: us-east-1"
+                      REGION="us-east-1"
+                  fi
+                  
+                  echo "Detected region: $REGION"
+                  
+                  # Create working directory
+                  WORK_DIR="/tmp/graviton-discovery-${TIMESTAMP}"
+                  mkdir -p "$WORK_DIR"
+                  cd "$WORK_DIR"
+                  
+                  # Set AWS region environment variable
+                  export AWS_DEFAULT_REGION="$REGION"
+                  
+                  # Debug: Show current AWS identity
+                  echo "Current AWS identity:"
+                  aws sts get-caller-identity || echo "Failed to get caller identity"
+                  
+                  # Debug: Check if bucket exists and is accessible
+                  echo "Checking S3 bucket access: $S3_BUCKET"
+                  aws s3 ls "s3://$S3_BUCKET/" --region "$REGION" || echo "Failed to list bucket contents"
+                  
+                  # Debug: Check if scripts folder exists
+                  echo "Checking scripts folder: $S3_BUCKET/scripts/"
+                  aws s3 ls "s3://$S3_BUCKET/scripts/" --region "$REGION" || echo "Failed to list scripts folder"
+                  
+                  echo "Downloading script from S3: $S3_BUCKET/scripts/app_identifier.sh"
+                  
+                  # Download script using instance role credentials
+                  aws s3 cp "s3://$S3_BUCKET/scripts/app_identifier.sh" ./app_identifier.sh --region "$REGION"
+                  
+                  if [[ $? -ne 0 ]]; then
+                      echo "Failed to download script from S3"
+                      exit 1
+                  fi
+                  
+                  # Validate downloaded script
+                  if [[ ! -s app_identifier.sh ]]; then
+                      echo "Downloaded script is empty"
+                      exit 1
+                  fi
+                  
+                  if ! head -1 app_identifier.sh | grep -q "^#!/bin/bash"; then
+                      echo "Downloaded file is not a valid bash script"
+                      echo "First few lines of downloaded file:"
+                      head -5 app_identifier.sh
+                      exit 1
+                  fi
+                  
+                  chmod +x app_identifier.sh
+                  echo "Script downloaded and validated successfully"
+                  
+                  # Generate output filename
+                  OUTPUT_FILE="${HOSTNAME}-${INSTANCE_ID}-${TIMESTAMP}.sbom.json"
+                  
+                  echo "Executing application discovery script..."
+                  export LOG_LEVEL="$LOG_LEVEL"
+                  ./app_identifier.sh "$OUTPUT_FILE"
+                  
+                  if [[ ! -f "$OUTPUT_FILE" ]]; then
+                      echo "Error: Output file not generated"
+                      exit 1
+                  fi
+                  
+                  echo "Generated SBOM file: $OUTPUT_FILE"
+                  
+                  # Upload to S3 using instance role credentials
+                  S3_KEY="${S3_PREFIX}/${INSTANCE_ID}/${OUTPUT_FILE}"
+                  echo "Uploading to s3://${S3_BUCKET}/${S3_KEY}"
+                  
+                  aws s3 cp "$OUTPUT_FILE" "s3://${S3_BUCKET}/${S3_KEY}" --region "$REGION"
+                  
+                  if [[ $? -eq 0 ]]; then
+                      echo "Successfully uploaded SBOM file to S3"
+                      echo "S3 Location: s3://${S3_BUCKET}/${S3_KEY}"
+                  else
+                      echo "Failed to upload to S3"
+                      exit 1
+                  fi
+                  
+                  # Cleanup
+                  cd /tmp
+                  rm -rf "$WORK_DIR"
+                  
+                  echo "Graviton discovery completed successfully"
+
+Outputs:
+  SSMDocumentName:
+    Description: 'Name of the SSM document for Graviton fleet discovery'
+    Value: !Ref GravitonDiscoveryDocument
+    Export:
+      Name: !Sub '${AWS::StackName}-SSMDocument'
+
+  S3BucketName:
+    Description: 'S3 bucket name for storing SBOM files'
+    Value: !Ref DiscoveryBucket
+    Export:
+      Name: !Sub '${AWS::StackName}-S3Bucket'
+
+
+
+  ExecutionInstructions:
+    Description: 'Instructions for executing the SSM document'
+    Value: !Sub |
+      Execute the SSM document using one of these methods:
+      
+      1. By Instance ID (single):
+      aws ssm send-command --document-name "${GravitonDiscoveryDocument}" --instance-ids "i-1234567890abcdef0"
+      
+      2. By Instance ID (multiple):
+      aws ssm send-command --document-name "${GravitonDiscoveryDocument}" --instance-ids "i-1234567890abcdef0" "i-0987654321fedcba0"
+      
+      3. By Tag (single):
+      aws ssm send-command --document-name "${GravitonDiscoveryDocument}" --targets "Key=tag:Environment,Values=Production"
+      
+      4. By Tag (multiple):
+      aws ssm send-command --document-name "${GravitonDiscoveryDocument}" --targets "Key=tag:Environment,Values=Production" "Key=tag:Application,Values=WebServer"
+      
+      5. All instances with SSM agent:
+      aws ssm send-command --document-name "${GravitonDiscoveryDocument}" --targets "Key=tag:aws:ssm:managed-instance,Values=true"
+      
+      Download collected data:
+      aws s3 sync s3://${DiscoveryBucket}/${BucketPrefix}/ ./graviton-discovery-data/
+      
+      Note: Ensure your instance roles have S3 permissions for the bucket above.
