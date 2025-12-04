@@ -1,0 +1,35 @@
+# AWS Configuration
+aws_region  = "us-east-1"
+bucket_name = "graviton-validator"
+
+# VPC Configuration
+# Option 1: Create new VPC (default)
+create_vpc = true
+
+# Option 2: Use existing VPC (uncomment and provide values)
+# create_vpc                 = false
+# existing_vpc_id            = "vpc-xxxxx"
+# existing_public_subnet_ids = ["subnet-xxxxx", "subnet-yyyyy"]
+
+# AWS Batch Configuration
+batch_instance_type = "m7g.xlarge"  # Graviton3, 4 vCPU, 16GB RAM (used for on-demand)
+batch_max_vcpus     = 20            # Max 5 instances (20 vCPUs / 4 vCPUs per instance)
+batch_use_spot      = false         # Set to true for up-to 90% cost savings with Spot instances
+batch_spot_instance_types = [
+  "m7g.xlarge",   # 4 vCPU, 16GB - Graviton3
+  "m7g.large",    # 2 vCPU, 8GB  - Graviton3
+  "m6g.xlarge",   # 4 vCPU, 16GB - Graviton2
+  "m6g.large",    # 2 vCPU, 8GB  - Graviton2
+  "c7g.xlarge"    # 4 vCPU, 8GB  - Graviton3 compute-optimized
+]
+batch_job_vcpus  = 3      # Leave 1 vCPU for ECS agent overhead
+batch_job_memory = 15360  # 15GB - Leave 1GB for ECS agent overhead
+
+# Monitoring
+enable_cloudwatch_dashboard = true
+
+# CloudWatch Logs Retention
+# Default: 365 days (1 year) for compliance
+# Valid values: 1, 3, 5, 7, 14, 30, 60, 90, 120, 150, 180, 365, 400, 545, 731, 1827, 3653
+# Cost impact: ~$0.65/month for 30 days, ~$7.80/month for 365 days
+log_retention_days = 365

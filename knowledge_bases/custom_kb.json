@@ -1,0 +1,1420 @@
+{
+  "$schema": "../schemas/knowledge_base_schema.json",
+  "metadata": {
+    "version": "1.0",
+    "description": "Application-level software compatibility database for Graviton processors",
+    "created_date": "2025-01-27",
+    "maintainer": "Custom KB",
+    "notes": "Application software, frameworks, databases, and services"
+  },
+  "software_compatibility": [
+    {
+      "name": "java",
+      "aliases": [
+        "openjdk",
+        "oracle-jdk",
+        "jdk"
+      ],
+      "compatibility": {
+        "supported_versions": [
+          {
+            "version_range": ">=8",
+            "status": "compatible",
+            "notes": "Java/JVM - full ARM64 support. Min: OpenJDK 8+"
+          }
+        ],
+        "minimum_supported_version": "8",
+        "recommended_version": "21"
+      }
+    },
+    {
+      "name": "tomcat",
+      "aliases": [
+        "apache-tomcat"
+      ],
+      "compatibility": {
+        "supported_versions": [
+          {
+            "version_range": ">=8.5",
+            "status": "compatible",
+            "notes": "Tomcat 8.5+ with Java 8+, v9+ supported"
+          }
+        ],
+        "minimum_supported_version": "8.5",
+        "recommended_version": null
+      }
+    },
+    {
+      "name": "mysql",
+      "aliases": [
+        "mysql-server"
+      ],
+      "compatibility": {
+        "supported_versions": [
+          {
+            "version_range": ">=8.0.23",
+            "status": "compatible",
+            "notes": "MySQL 8.0.23+ supported on Graviton"
+          }
+        ],
+        "minimum_supported_version": "8.0.23",
+        "recommended_version": null
+      }
+    },
+    {
+      "name": "postgresql",
+      "aliases": [
+        "postgres"
+      ],
+      "compatibility": {
+        "supported_versions": [
+          {
+            "version_range": ">=12.3",
+            "status": "compatible",
+            "notes": "PostgreSQL 12.3 and 13+ supported"
+          }
+        ],
+        "minimum_supported_version": "12.3",
+        "recommended_version": null
+      }
+    },
+    {
+      "name": "qualys-docker-agent",
+      "aliases": [
+        "qualys"
+      ],
+      "compatibility": {
+        "supported_versions": [
+          {
+            "version_range": ">=1.15.0",
+            "status": "compatible",
+            "notes": "Qualys Docker Agent 1.15.0-0+ supported on Graviton"
+          }
+        ],
+        "minimum_supported_version": "1.15.0",
+        "recommended_version": null
+      }
+    },
+    {
+      "name": "django",
+      "aliases": [
+        "python-django"
+      ],
+      "compatibility": {
+        "supported_versions": [
+          {
+            "version_range": ">=3.2",
+            "status": "compatible",
+            "notes": "Django 3.2+ with Python 3.8+ supported"
+          }
+        ],
+        "minimum_supported_version": "3.2",
+        "recommended_version": null
+      }
+    },
+    {
+      "name": "php",
+      "aliases": [
+        "php-fpm"
+      ],
+      "compatibility": {
+        "supported_versions": [
+          {
+            "version_range": ">=7.4",
+            "status": "compatible",
+            "notes": "PHP 7.4+ supported on Graviton"
+          }
+        ],
+        "minimum_supported_version": "7.4",
+        "recommended_version": null
+      }
+    },
+    {
+      "name": "redis",
+      "aliases": [
+        "redis-server",
+        "elasticache"
+      ],
+      "compatibility": {
+        "supported_versions": [
+          {
+            "version_range": ">=5.0.6",
+            "status": "compatible",
+            "notes": "ElastiCache Redis 5.0.6+, OpenSource Redis 6.0.0+ due to EOL of v5"
+          }
+        ],
+        "minimum_supported_version": "5.0.6",
+        "recommended_version": null
+      }
+    },
+    {
+      "name": "puppet",
+      "aliases": [],
+      "compatibility": {
+        "supported_versions": [
+          {
+            "version_range": "",
+            "status": "compatible_with_notes",
+            "notes": "Puppet client supported on ARM, server not officially supported but can be built from source"
+          }
+        ],
+        "minimum_supported_version": null,
+        "recommended_version": null
+      }
+    },
+    {
+      "name": "mongodb",
+      "aliases": [
+        "mongo"
+      ],
+      "compatibility": {
+        "supported_versions": [
+          {
+            "version_range": ">=4.2.15",
+            "status": "compatible",
+            "notes": "MongoDB 4.2.15+, 4.4.7+, 5.0.0+ supported"
+          }
+        ],
+        "minimum_supported_version": "4.2.15",
+        "recommended_version": null
+      }
+    },
+    {
+      "name": "nodejs",
+      "aliases": [
+        "node"
+      ],
+      "compatibility": {
+        "supported_versions": [
+          {
+            "version_range": ">=14",
+            "status": "compatible",
+            "notes": "Node.js 14+ supported (12+ available but EOL)"
+          }
+        ],
+        "minimum_supported_version": "14",
+        "recommended_version": null
+      }
+    },
+    {
+      "name": "nginx",
+      "aliases": [
+        "nginx-server"
+      ],
+      "compatibility": {
+        "supported_versions": [
+          {
+            "version_range": ">=1.16.0",
+            "status": "compatible",
+            "notes": "Nginx has full ARM64 support. Min: 1.16+"
+          }
+        ],
+        "minimum_supported_version": "1.16.0",
+        "recommended_version": "1.26.0"
+      }
+    },
+    {
+      "name": "apache",
+      "aliases": [
+        "httpd",
+        "apache2"
+      ],
+      "compatibility": {
+        "supported_versions": [
+          {
+            "version_range": ">=2.4",
+            "status": "compatible",
+            "notes": "Apache 2.4+ supported on Graviton"
+          }
+        ],
+        "minimum_supported_version": "2.4",
+        "recommended_version": null
+      }
+    },
+    {
+      "name": "aerospike",
+      "aliases": [],
+      "compatibility": {
+        "supported_versions": [
+          {
+            "version_range": ">=6.2.0",
+            "status": "compatible",
+            "notes": "Aerospike 6.2.0+ supported on Graviton"
+          }
+        ],
+        "minimum_supported_version": "6.2.0",
+        "recommended_version": null
+      }
+    },
+    {
+      "name": "rabbitmq",
+      "aliases": [
+        "rabbitmq-server"
+      ],
+      "compatibility": {
+        "supported_versions": [
+          {
+            "version_range": ">=3.6.11",
+            "status": "compatible",
+            "notes": "RabbitMQ 3.6.11+ supported on Graviton"
+          }
+        ],
+        "minimum_supported_version": "3.6.11",
+        "recommended_version": null
+      }
+    },
+    {
+      "name": "confluent-kafka",
+      "aliases": [
+        "confluent"
+      ],
+      "compatibility": {
+        "supported_versions": [
+          {
+            "version_range": "",
+            "status": "incompatible",
+            "notes": "Not supported - only dev/test Docker images available"
+          }
+        ],
+        "minimum_supported_version": null,
+        "recommended_version": null
+      }
+    },
+    {
+      "name": "rds-aurora-mysql",
+      "aliases": [
+        "aurora-mysql"
+      ],
+      "compatibility": {
+        "supported_versions": [
+          {
+            "version_range": ">=1.11.1",
+            "status": "compatible",
+            "notes": "Aurora MySQL 5.7 1.11.1+, versions 2.09.2+, 2.10.0+, 3.01.0+ supported"
+          }
+        ],
+        "minimum_supported_version": "1.11.1",
+        "recommended_version": null
+      }
+    },
+    {
+      "name": "rds-aurora-postgresql",
+      "aliases": [
+        "aurora-postgresql"
+      ],
+      "compatibility": {
+        "supported_versions": [
+          {
+            "version_range": ">=11.9",
+            "status": "compatible",
+            "notes": "Aurora PostgreSQL 11.9+, 12.8+, 13.3+, 14.3+, 15.2+ supported"
+          }
+        ],
+        "minimum_supported_version": "11.9",
+        "recommended_version": null
+      }
+    },
+    {
+      "name": "opensearch",
+      "aliases": [
+        "amazon-opensearch"
+      ],
+      "compatibility": {
+        "supported_versions": [
+          {
+            "version_range": ">=1.3",
+            "status": "compatible",
+            "notes": "Amazon OpenSearch 1.3+, Elasticsearch 7.9+ supported"
+          }
+        ],
+        "minimum_supported_version": "1.3",
+        "recommended_version": null
+      }
+    },
+    {
+      "name": "zend-engine",
+      "aliases": [
+        "zend"
+      ],
+      "compatibility": {
+        "supported_versions": [
+          {
+            "version_range": ">=3.4.0",
+            "status": "compatible",
+            "notes": "Zend Engine v3.4.0 with PHP 7.4+ supported"
+          }
+        ],
+        "minimum_supported_version": "3.4.0",
+        "recommended_version": null
+      }
+    },
+    {
+      "name": "imagemagick",
+      "aliases": [],
+      "compatibility": {
+        "supported_versions": [
+          {
+            "version_range": ">=6.9.10.32",
+            "status": "compatible",
+            "notes": "ImageMagick 6.9.10.32+ on Ubuntu 20.04 supported"
+          }
+        ],
+        "minimum_supported_version": "6.9.10.32",
+        "recommended_version": null
+      }
+    },
+    {
+      "name": "pm2",
+      "aliases": [],
+      "compatibility": {
+        "supported_versions": [
+          {
+            "version_range": "",
+            "status": "compatible",
+            "notes": "PM2 works on Graviton with Node.js 12+ support"
+          }
+        ],
+        "minimum_supported_version": null,
+        "recommended_version": null
+      }
+    },
+    {
+      "name": "phpmailer",
+      "aliases": [],
+      "compatibility": {
+        "supported_versions": [
+          {
+            "version_range": ">=6.0.6",
+            "status": "compatible",
+            "notes": "PHPMailer 6.0.6+ supported on Graviton"
+          }
+        ],
+        "minimum_supported_version": "6.0.6",
+        "recommended_version": null
+      }
+    },
+    {
+      "name": "mariadb",
+      "aliases": [
+        "mariadb-server"
+      ],
+      "compatibility": {
+        "supported_versions": [
+          {
+            "version_range": ">=10.4",
+            "status": "compatible",
+            "notes": "MariaDB 10.4+ supported on Graviton"
+          }
+        ],
+        "minimum_supported_version": "10.4",
+        "recommended_version": null
+      }
+    },
+    {
+      "name": "emr",
+      "aliases": [
+        "amazon-emr"
+      ],
+      "compatibility": {
+        "supported_versions": [
+          {
+            "version_range": ">=5.30.0",
+            "status": "compatible",
+            "notes": "Amazon EMR emr-5.30.0, emr-6.1.0+ supported"
+          }
+        ],
+        "minimum_supported_version": "5.30.0",
+        "recommended_version": null
+      }
+    },
+    {
+      "name": "telegraf",
+      "aliases": [],
+      "compatibility": {
+        "supported_versions": [
+          {
+            "version_range": "",
+            "status": "compatible",
+            "notes": "Telegraf requires Go v1.20+ for building from source"
+          }
+        ],
+        "minimum_supported_version": null,
+        "recommended_version": null
+      }
+    },
+    {
+      "name": "dovecot",
+      "aliases": [],
+      "compatibility": {
+        "supported_versions": [
+          {
+            "version_range": ">=2.3.8",
+            "status": "compatible",
+            "notes": "Dovecot 2.3.8+ IMAP/POP3 server supported"
+          }
+        ],
+        "minimum_supported_version": "2.3.8",
+        "recommended_version": null
+      }
+    },
+    {
+      "name": "go",
+      "aliases": [
+        "golang"
+      ],
+      "compatibility": {
+        "supported_versions": [
+          {
+            "version_range": ">=1.9",
+            "status": "compatible",
+            "notes": "Go 1.9+ supported, 1.16+ recommended"
+          }
+        ],
+        "minimum_supported_version": "1.9",
+        "recommended_version": "1.16"
+      }
+    },
+    {
+      "name": "monit",
+      "aliases": [],
+      "compatibility": {
+        "supported_versions": [
+          {
+            "version_range": ">=5.25.1",
+            "status": "compatible",
+            "notes": "Monit 5.25.1+ process supervision tool supported"
+          }
+        ],
+        "minimum_supported_version": "5.25.1",
+        "recommended_version": null
+      }
+    },
+    {
+      "name": "filebeat",
+      "aliases": [],
+      "compatibility": {
+        "supported_versions": [
+          {
+            "version_range": ">=7.12.0",
+            "status": "compatible",
+            "notes": "Filebeat 7.12.0+ supported on Graviton"
+          }
+        ],
+        "minimum_supported_version": "7.12.0",
+        "recommended_version": null
+      }
+    },
+    {
+      "name": "elixir",
+      "aliases": [],
+      "compatibility": {
+        "supported_versions": [
+          {
+            "version_range": ">=1.3.3",
+            "status": "compatible",
+            "notes": "Elixir 1.3.3+ functional programming language supported"
+          }
+        ],
+        "minimum_supported_version": "1.3.3",
+        "recommended_version": null
+      }
+    },
+    {
+      "name": "elasticsearch",
+      "aliases": [
+        "elastic"
+      ],
+      "compatibility": {
+        "supported_versions": [
+          {
+            "version_range": ">=7.8.0",
+            "status": "compatible",
+            "notes": "Elasticsearch 7.8.0+ supported on Graviton"
+          }
+        ],
+        "minimum_supported_version": "7.8.0",
+        "recommended_version": null
+      }
+    },
+    {
+      "name": "newrelic",
+      "aliases": [
+        "newrelic-agent"
+      ],
+      "compatibility": {
+        "supported_versions": [
+          {
+            "version_range": ">=1.16.0",
+            "status": "compatible",
+            "notes": "NewRelic Infrastructure Agent 1.16.0+, APM agents language-dependent"
+          }
+        ],
+        "minimum_supported_version": "1.16.0",
+        "recommended_version": null
+      }
+    },
+    {
+      "name": "kafka",
+      "aliases": [
+        "apache-kafka"
+      ],
+      "compatibility": {
+        "supported_versions": [
+          {
+            "version_range": ">=2.6.0",
+            "status": "compatible",
+            "notes": "Apache Kafka 2.6.0+ supported on Graviton"
+          }
+        ],
+        "minimum_supported_version": "2.6.0",
+        "recommended_version": null
+      }
+    },
+    {
+      "name": "kong",
+      "aliases": [],
+      "compatibility": {
+        "supported_versions": [
+          {
+            "version_range": ">=1.8.0",
+            "status": "compatible",
+            "notes": "Kong 1.8.0+ supported, 3.3.1+ recommended for Graviton3"
+          }
+        ],
+        "minimum_supported_version": "1.8.0",
+        "recommended_version": "3.3.1"
+      }
+    },
+    {
+      "name": "spark",
+      "aliases": [
+        "apache-spark"
+      ],
+      "compatibility": {
+        "supported_versions": [
+          {
+            "version_range": ">=2.4.8",
+            "status": "compatible",
+            "notes": "Apache Spark 2.4.8+ and 3.4.0+ supported on EMR"
+          }
+        ],
+        "minimum_supported_version": "2.4.8",
+        "recommended_version": null
+      }
+    },
+    {
+      "name": "redpanda",
+      "aliases": [],
+      "compatibility": {
+        "supported_versions": [
+          {
+            "version_range": ">=21.5.6",
+            "status": "compatible",
+            "notes": "RedPanda 21.5.6+ Kafka-compatible streaming platform supported"
+          }
+        ],
+        "minimum_supported_version": "21.5.6",
+        "recommended_version": null
+      }
+    },
+    {
+      "name": "scylladb",
+      "aliases": [
+        "scylla"
+      ],
+      "compatibility": {
+        "supported_versions": [
+          {
+            "version_range": ">=5.2",
+            "status": "compatible",
+            "notes": "ScyllaDB 5.2+ supported, containers 4.6.6+"
+          }
+        ],
+        "minimum_supported_version": "5.2",
+        "recommended_version": null
+      }
+    },
+    {
+      "name": "yugabytedb",
+      "aliases": [
+        "yugabyte"
+      ],
+      "compatibility": {
+        "supported_versions": [
+          {
+            "version_range": ">=2.11",
+            "status": "compatible",
+            "notes": "YugabyteDB v2.11+ supported on Graviton"
+          }
+        ],
+        "minimum_supported_version": "2.11",
+        "recommended_version": null
+      }
+    },
+    {
+      "name": "linkerd",
+      "aliases": [],
+      "compatibility": {
+        "supported_versions": [
+          {
+            "version_range": ">=2.9",
+            "status": "compatible",
+            "notes": "Linkerd 2.9+ supported on Kubernetes/Graviton"
+          }
+        ],
+        "minimum_supported_version": "2.9",
+        "recommended_version": null
+      }
+    },
+    {
+      "name": "oracle",
+      "aliases": [
+        "oracle-database"
+      ],
+      "compatibility": {
+        "supported_versions": [
+          {
+            "version_range": ">=19.19",
+            "status": "compatible",
+            "notes": "Oracle DB 19c (19.19+) supported on Graviton"
+          }
+        ],
+        "minimum_supported_version": "19.19",
+        "recommended_version": null
+      }
+    },
+    {
+      "name": "openstreetmap",
+      "aliases": [
+        "osm"
+      ],
+      "compatibility": {
+        "supported_versions": [
+          {
+            "version_range": ">=2.2.20",
+            "status": "compatible",
+            "notes": "OpenStreetMap tile server v2.2.20+ supported"
+          }
+        ],
+        "minimum_supported_version": "2.2.20",
+        "recommended_version": null
+      }
+    },
+    {
+      "name": "wazuh",
+      "aliases": [],
+      "compatibility": {
+        "supported_versions": [
+          {
+            "version_range": "",
+            "status": "compatible",
+            "notes": "Wazuh can be installed on ARM64, no prebuilt binary available"
+          }
+        ],
+        "minimum_supported_version": null,
+        "recommended_version": null
+      }
+    },
+    {
+      "name": "chef",
+      "aliases": [],
+      "compatibility": {
+        "supported_versions": [
+          {
+            "version_range": ">=16.11.7",
+            "status": "compatible",
+            "notes": "Chef v16.11.7+ supported on Graviton"
+          }
+        ],
+        "minimum_supported_version": "16.11.7",
+        "recommended_version": null
+      }
+    },
+    {
+      "name": "splunk",
+      "aliases": [
+        "splunk-enterprise"
+      ],
+      "compatibility": {
+        "supported_versions": [
+          {
+            "version_range": ">=8.1.1",
+            "status": "compatible",
+            "notes": "Splunk v8.1.1+ supported on Graviton"
+          }
+        ],
+        "minimum_supported_version": "8.1.1",
+        "recommended_version": null
+      }
+    },
+    {
+      "name": "cassandra",
+      "aliases": [
+        "apache-cassandra"
+      ],
+      "compatibility": {
+        "supported_versions": [
+          {
+            "version_range": ">=3.0.14",
+            "status": "compatible",
+            "notes": "Apache Cassandra 3.0.14+ supported on Graviton"
+          }
+        ],
+        "minimum_supported_version": "3.0.14",
+        "recommended_version": null
+      }
+    },
+    {
+      "name": "vertica",
+      "aliases": [
+        "vertica-db"
+      ],
+      "compatibility": {
+        "supported_versions": [
+          {
+            "version_range": "",
+            "status": "incompatible",
+            "notes": "Vertica DB not supported on ARM64 yet"
+          }
+        ],
+        "minimum_supported_version": null,
+        "recommended_version": null
+      }
+    },
+    {
+      "name": "memcached",
+      "aliases": [],
+      "compatibility": {
+        "supported_versions": [
+          {
+            "version_range": ">=1.5.1",
+            "status": "compatible",
+            "notes": "Memcached 1.5.1+ supported on Graviton"
+          }
+        ],
+        "minimum_supported_version": "1.5.1",
+        "recommended_version": null
+      }
+    },
+    {
+      "name": "python",
+      "aliases": [
+        "python3"
+      ],
+      "compatibility": {
+        "supported_versions": [
+          {
+            "version_range": ">=3.8",
+            "status": "compatible",
+            "notes": "Python 3.8+ supported on Graviton"
+          }
+        ],
+        "minimum_supported_version": "3.8",
+        "recommended_version": null
+      }
+    },
+    {
+      "name": "datadog",
+      "aliases": [
+        "datadog-agent"
+      ],
+      "compatibility": {
+        "supported_versions": [
+          {
+            "version_range": ">=6.0",
+            "status": "compatible",
+            "notes": "DataDog agent v6 and v7 supported on ARM64"
+          }
+        ],
+        "minimum_supported_version": null,
+        "recommended_version": null
+      }
+    },
+    {
+      "name": "amazon-msk",
+      "aliases": [
+        "msk"
+      ],
+      "compatibility": {
+        "supported_versions": [
+          {
+            "version_range": ">=2.8.2",
+            "status": "compatible",
+            "notes": "Amazon MSK Kafka versions 2.8.2.tiered, 3.3.2+ supported"
+          }
+        ],
+        "minimum_supported_version": "2.8.2",
+        "recommended_version": null
+      }
+    },
+    {
+      "name": "jboss",
+      "aliases": [],
+      "compatibility": {
+        "supported_versions": [
+          {
+            "version_range": ">=7.2",
+            "status": "compatible_with_notes",
+            "notes": "JBoss 7.2+ with Java 11+ compatible but not yet officially supported by RedHat"
+          }
+        ],
+        "minimum_supported_version": "7.2",
+        "recommended_version": null
+      }
+    },
+    {
+      "name": "ruby",
+      "aliases": [],
+      "compatibility": {
+        "supported_versions": [
+          {
+            "version_range": ">=3.0",
+            "status": "compatible",
+            "notes": "Ruby 3.0+ supported on Graviton"
+          }
+        ],
+        "minimum_supported_version": "3.0",
+        "recommended_version": null
+      }
+    },
+    {
+      "name": "kibana",
+      "aliases": [],
+      "compatibility": {
+        "supported_versions": [
+          {
+            "version_range": ">=7.13.0",
+            "status": "compatible",
+            "notes": "Kibana 7.13.0+ supported on Graviton"
+          }
+        ],
+        "minimum_supported_version": "7.13.0",
+        "recommended_version": null
+      }
+    },
+    {
+      "name": "nifi",
+      "aliases": [
+        "apache-nifi"
+      ],
+      "compatibility": {
+        "supported_versions": [
+          {
+            "version_range": ">=1.19.0",
+            "status": "compatible",
+            "notes": "Apache Nifi 1.19.0+ supported on Graviton"
+          }
+        ],
+        "minimum_supported_version": "1.19.0",
+        "recommended_version": null
+      }
+    },
+    {
+      "name": "portainer",
+      "aliases": [],
+      "compatibility": {
+        "supported_versions": [
+          {
+            "version_range": ">=1.11.1",
+            "status": "compatible",
+            "notes": "Portainer 1.11.1+ container management supported"
+          }
+        ],
+        "minimum_supported_version": "1.11.1",
+        "recommended_version": null
+      }
+    },
+    {
+      "name": "wildfly",
+      "aliases": [],
+      "compatibility": {
+        "supported_versions": [
+          {
+            "version_range": ">=27.0.0",
+            "status": "compatible",
+            "notes": "WildFly 27.0.0+ supported on Graviton"
+          }
+        ],
+        "minimum_supported_version": "27.0.0",
+        "recommended_version": null
+      }
+    },
+    {
+      "name": "manage-engine",
+      "aliases": [
+        "patch-manager"
+      ],
+      "compatibility": {
+        "supported_versions": [
+          {
+            "version_range": "",
+            "status": "incompatible",
+            "notes": "ManageEngine Patch Manager not supported on ARM64"
+          }
+        ],
+        "minimum_supported_version": null,
+        "recommended_version": null
+      }
+    },
+    {
+      "name": "loki",
+      "aliases": [
+        "grafana-loki"
+      ],
+      "compatibility": {
+        "supported_versions": [
+          {
+            "version_range": ">=2.0.0",
+            "status": "compatible",
+            "notes": "Grafana Loki - ARM64 images available"
+          }
+        ],
+        "minimum_supported_version": "2.0.0",
+        "recommended_version": "3.0.0"
+      }
+    },
+    {
+      "name": "ansible",
+      "aliases": [],
+      "compatibility": {
+        "supported_versions": [
+          {
+            "version_range": "",
+            "status": "compatible",
+            "notes": "Ansible automation platform supported on ARM64"
+          }
+        ],
+        "minimum_supported_version": null,
+        "recommended_version": null
+      }
+    },
+    {
+      "name": "graylog",
+      "aliases": [],
+      "compatibility": {
+        "supported_versions": [
+          {
+            "version_range": ">=4.1.3",
+            "status": "compatible",
+            "notes": "GrayLog 4.1.3+ log management supported"
+          }
+        ],
+        "minimum_supported_version": "4.1.3",
+        "recommended_version": null
+      }
+    },
+    {
+      "name": "faiss-cpu",
+      "aliases": [
+        "faiss"
+      ],
+      "compatibility": {
+        "supported_versions": [
+          {
+            "version_range": "",
+            "status": "compatible",
+            "notes": "Facebook AI Similarity Search (FAISS) CPU version supported"
+          }
+        ],
+        "minimum_supported_version": null,
+        "recommended_version": null
+      }
+    },
+    {
+      "name": "annoy",
+      "aliases": [],
+      "compatibility": {
+        "supported_versions": [
+          {
+            "version_range": "",
+            "status": "compatible",
+            "notes": "Spotify Annoy vector search library supported"
+          }
+        ],
+        "minimum_supported_version": null,
+        "recommended_version": null
+      }
+    },
+    {
+      "name": "maven",
+      "aliases": [
+        "apache-maven"
+      ],
+      "compatibility": {
+        "supported_versions": [
+          {
+            "version_range": ">=3.9.4",
+            "status": "compatible",
+            "notes": "Maven 3.9.4+ supported on Graviton"
+          }
+        ],
+        "minimum_supported_version": "3.9.4",
+        "recommended_version": null
+      }
+    },
+    {
+      "name": "storm",
+      "aliases": [
+        "apache-storm"
+      ],
+      "compatibility": {
+        "supported_versions": [
+          {
+            "version_range": ">=2.3.0",
+            "status": "compatible",
+            "notes": "Apache Storm 2.3.0+ supported on Graviton"
+          }
+        ],
+        "minimum_supported_version": "2.3.0",
+        "recommended_version": null
+      }
+    },
+    {
+      "name": "trend-micro-deep-security",
+      "aliases": [
+        "deep-security",
+        "hips"
+      ],
+      "compatibility": {
+        "supported_versions": [
+          {
+            "version_range": ">=20.0",
+            "status": "compatible",
+            "notes": "Trend Micro Deep Security Agent 20.0+ supported"
+          }
+        ],
+        "minimum_supported_version": "20.0",
+        "recommended_version": null
+      }
+    },
+    {
+      "name": "zabbix",
+      "aliases": [],
+      "compatibility": {
+        "supported_versions": [
+          {
+            "version_range": ">=5.0",
+            "status": "compatible",
+            "notes": "Zabbix 5.0+ monitoring tool supported"
+          }
+        ],
+        "minimum_supported_version": "5.0",
+        "recommended_version": null
+      }
+    },
+    {
+      "name": "airflow",
+      "aliases": [
+        "apache-airflow"
+      ],
+      "compatibility": {
+        "supported_versions": [
+          {
+            "version_range": ">=2.3.0",
+            "status": "compatible",
+            "notes": "Apache Airflow 2.3.0+ supported on Graviton"
+          }
+        ],
+        "minimum_supported_version": "2.3.0",
+        "recommended_version": null
+      }
+    },
+    {
+      "name": "voltdb",
+      "aliases": [],
+      "compatibility": {
+        "supported_versions": [
+          {
+            "version_range": ">=13.0.2",
+            "status": "compatible",
+            "notes": "VoltDB v13.0.2+ supported on Graviton"
+          }
+        ],
+        "minimum_supported_version": "13.0.2",
+        "recommended_version": null
+      }
+    },
+    {
+      "name": "logstash",
+      "aliases": [],
+      "compatibility": {
+        "supported_versions": [
+          {
+            "version_range": ">=7.10.0",
+            "status": "compatible",
+            "notes": "Logstash 7.10.0+ supported on Graviton"
+          }
+        ],
+        "minimum_supported_version": "7.10.0",
+        "recommended_version": null
+      }
+    },
+    {
+      "name": "databricks",
+      "aliases": [],
+      "compatibility": {
+        "supported_versions": [
+          {
+            "version_range": "",
+            "status": "compatible",
+            "notes": "Databricks platform supports Graviton2 with up to 3x better price-performance"
+          }
+        ],
+        "minimum_supported_version": null,
+        "recommended_version": null
+      }
+    },
+    {
+      "name": "proxysql",
+      "aliases": [],
+      "compatibility": {
+        "supported_versions": [
+          {
+            "version_range": ">=2.0.15",
+            "status": "compatible",
+            "notes": "ProxySQL v2.0.15+ supported on Graviton"
+          }
+        ],
+        "minimum_supported_version": "2.0.15",
+        "recommended_version": null
+      }
+    },
+    {
+      "name": "typescript",
+      "aliases": [
+        "tsc"
+      ],
+      "compatibility": {
+        "supported_versions": [
+          {
+            "version_range": "",
+            "status": "compatible",
+            "notes": "TypeScript supports ARM64 architecture"
+          }
+        ],
+        "minimum_supported_version": null,
+        "recommended_version": null
+      }
+    },
+    {
+      "name": "vault",
+      "aliases": [
+        "hashicorp-vault"
+      ],
+      "compatibility": {
+        "supported_versions": [
+          {
+            "version_range": "",
+            "status": "compatible",
+            "notes": "HashiCorp Vault supports ARM64 architecture"
+          }
+        ],
+        "minimum_supported_version": null,
+        "recommended_version": null
+      }
+    },
+    {
+      "name": "teleport",
+      "aliases": [],
+      "compatibility": {
+        "supported_versions": [
+          {
+            "version_range": "",
+            "status": "compatible",
+            "notes": "Teleport secure access platform supports ARM64"
+          }
+        ],
+        "minimum_supported_version": null,
+        "recommended_version": null
+      }
+    },
+    {
+      "name": "rails",
+      "aliases": [
+        "ruby-on-rails"
+      ],
+      "compatibility": {
+        "supported_versions": [
+          {
+            "version_range": "",
+            "status": "compatible",
+            "notes": "Rails compatible with Ruby 3+ works on Graviton"
+          }
+        ],
+        "minimum_supported_version": null,
+        "recommended_version": null
+      }
+    },
+    {
+      "name": "anaconda",
+      "aliases": [],
+      "compatibility": {
+        "supported_versions": [
+          {
+            "version_range": "",
+            "status": "compatible",
+            "notes": "Anaconda Python distribution supports ARM64/Graviton2"
+          }
+        ],
+        "minimum_supported_version": null,
+        "recommended_version": null
+      }
+    },
+    {
+      "name": "consul",
+      "aliases": [
+        "hashicorp-consul"
+      ],
+      "compatibility": {
+        "supported_versions": [
+          {
+            "version_range": "",
+            "status": "compatible",
+            "notes": "HashiCorp Consul supports ARM64 architecture"
+          }
+        ],
+        "minimum_supported_version": null,
+        "recommended_version": null
+      }
+    },
+    {
+      "name": "terraform",
+      "aliases": [
+        "hashicorp-terraform"
+      ],
+      "compatibility": {
+        "supported_versions": [
+          {
+            "version_range": "",
+            "status": "compatible",
+            "notes": "HashiCorp Terraform supports ARM64 architecture"
+          }
+        ],
+        "minimum_supported_version": null,
+        "recommended_version": null
+      }
+    },
+    {
+      "name": "nomad",
+      "aliases": [
+        "hashicorp-nomad"
+      ],
+      "compatibility": {
+        "supported_versions": [
+          {
+            "version_range": "",
+            "status": "compatible",
+            "notes": "HashiCorp Nomad supports ARM64 architecture"
+          }
+        ],
+        "minimum_supported_version": null,
+        "recommended_version": null
+      }
+    },
+    {
+      "name": "keydb",
+      "aliases": [
+        "keydb-server",
+        "keydb-cli"
+      ],
+      "compatibility": {
+        "supported_versions": [
+          {
+            "version_range": ">=5.3.2",
+            "status": "compatible",
+            "notes": "KeyDB Redis-compatible database - ARM64 compatible container image available for v5.3.2+"
+          }
+        ],
+        "minimum_supported_version": "5.3.2",
+        "recommended_version": "6.3.0"
+      }
+    },
+    {
+      "name": "krakend",
+      "aliases": [],
+      "compatibility": {
+        "supported_versions": [
+          {
+            "version_range": ">=2.1.3",
+            "status": "compatible",
+            "notes": "KrakenD API Gateway - ARM64 binary available from v2.1.3 onwards"
+          }
+        ],
+        "minimum_supported_version": "2.1.3",
+        "recommended_version": "2.6.0"
+      }
+    },
+    {
+      "name": "prometheus",
+      "aliases": [
+        "alertmanager",
+        "prometheus-alertmanager"
+      ],
+      "compatibility": {
+        "supported_versions": [
+          {
+            "version_range": ">=2.20.0",
+            "status": "compatible",
+            "notes": "Prometheus monitoring system - ARM64 images available for all components"
+          }
+        ],
+        "minimum_supported_version": "2.20.0",
+        "recommended_version": "2.45.0"
+      }
+    },
+    {
+      "name": "influxd",
+      "aliases": [
+        "influxdb"
+      ],
+      "compatibility": {
+        "supported_versions": [
+          {
+            "version_range": ">=1.8.0",
+            "status": "compatible",
+            "notes": "InfluxDB - ARM64 images available. Min: 1.8+"
+          }
+        ],
+        "minimum_supported_version": "1.8.0",
+        "recommended_version": "2.7.0"
+      }
+    },
+    {
+      "name": "argocd",
+      "aliases": [
+        "argocd-server",
+        "argocd-notifica",
+        "argocd-notification-controller",
+        "argocd-repo-ser",
+        "argocd-repo-server",
+        "argocd-dex"
+      ],
+      "compatibility": {
+        "supported_versions": [
+          {
+            "version_range": ">=2.4.0",
+            "status": "compatible",
+            "notes": "ArgoCD GitOps platform - ARM64 images available for all components"
+          }
+        ],
+        "minimum_supported_version": "2.4.0",
+        "recommended_version": "2.12.0"
+      }
+    },
+    {
+      "name": "minio",
+      "aliases": [],
+      "compatibility": {
+        "supported_versions": [
+          {
+            "version_range": ">=2022.9.22",
+            "status": "compatible",
+            "notes": "MinIO object storage - ARM64 container images available"
+          }
+        ],
+        "minimum_supported_version": "022.9.22",
+        "recommended_version": "latest"
+      }
+    }
+  ]
+}

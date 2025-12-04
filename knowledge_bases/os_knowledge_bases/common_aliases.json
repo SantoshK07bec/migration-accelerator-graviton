@@ -1,0 +1,27 @@
+{
+  "$schema": "../schemas/common_aliases_schema.json",
+  "metadata": {
+    "name": "Common SBOM Name Aliases",
+    "description": "Persistent aliases for truncated or variant component names found in SBOMs",
+    "version": "1.0",
+    "created_date": "2025-01-27",
+    "purpose": "Maps SBOM component names to OS knowledge base package names"
+  },
+  "aliases": {
+    "node_exporter": "prometheus-node-exporter",
+    "networkd-dispat": "networkd-dispatcher",
+    "unattended-upgr": "unattended-upgrades",
+    "docker": "docker.io",
+    "containerd": "containerd.io",
+    "nginx": "nginx-core",
+    "apache": "apache2",
+    "mysql": "mysql-server",
+    "postgres": "postgresql",
+    "redis": "redis-server",
+    "ssh": "openssh-server",
+    "sshd": "openssh-server",
+    "chronyd": "chrony",
+    "amazon-ssm-agen": "amazon-ssm-agent",
+    "redis-server": "redis6"
+  }
+}

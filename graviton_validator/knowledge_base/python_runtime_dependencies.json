@@ -1,0 +1,132 @@
+{
+  "numpy": {
+    "default_status": "compatible",
+    "notes": "NumPy has excellent ARM64 support with optimized wheels",
+    "recommendations": ["Use latest version for best ARM64 performance"],
+    "version_ranges": [
+      {
+        "range": ">=1.19.0",
+        "status": "compatible",
+        "notes": "Native ARM64 wheels available"
+      },
+      {
+        "range": "<1.19.0",
+        "status": "unknown",
+        "notes": "May require compilation from source"
+      }
+    ]
+  },
+  "pandas": {
+    "default_status": "compatible",
+    "notes": "Pandas supports ARM64 with native wheels",
+    "recommendations": ["Ensure NumPy dependency is ARM64 compatible"],
+    "version_ranges": [
+      {
+        "range": ">=1.2.0",
+        "status": "compatible",
+        "notes": "ARM64 wheels available"
+      }
+    ]
+  },
+  "scipy": {
+    "default_status": "compatible",
+    "notes": "SciPy provides ARM64 wheels for recent versions",
+    "recommendations": ["Use version 1.7.0 or later for best ARM64 support"],
+    "version_ranges": [
+      {
+        "range": ">=1.7.0",
+        "status": "compatible",
+        "notes": "Native ARM64 wheels with optimizations"
+      },
+      {
+        "range": "<1.7.0",
+        "status": "unknown",
+        "notes": "May require compilation with BLAS/LAPACK"
+      }
+    ]
+  },
+  "tensorflow": {
+    "default_status": "compatible",
+    "notes": "TensorFlow supports ARM64 on Linux",
+    "recommendations": ["Use tensorflow-cpu for ARM64 compatibility"],
+    "version_ranges": [
+      {
+        "range": ">=2.4.0",
+        "status": "compatible",
+        "notes": "Official ARM64 support"
+      }
+    ]
+  },
+  "pytorch": {
+    "default_status": "compatible",
+    "notes": "PyTorch has ARM64 support",
+    "recommendations": ["Install from official PyTorch index for ARM64"],
+    "version_ranges": [
+      {
+        "range": ">=1.8.0",
+        "status": "compatible",
+        "notes": "ARM64 wheels available"
+      }
+    ]
+  },
+  "pillow": {
+    "default_status": "compatible",
+    "notes": "Pillow provides ARM64 wheels",
+    "recommendations": ["Latest versions have best ARM64 optimization"],
+    "version_ranges": [
+      {
+        "range": ">=8.0.0",
+        "status": "compatible",
+        "notes": "Native ARM64 wheels"
+      }
+    ]
+  },
+  "cryptography": {
+    "default_status": "compatible",
+    "notes": "Cryptography supports ARM64 with native wheels",
+    "recommendations": ["Use latest version for security updates"],
+    "version_ranges": [
+      {
+        "range": ">=3.0.0",
+        "status": "compatible",
+        "notes": "ARM64 wheels with Rust backend"
+      }
+    ]
+  },
+  "lxml": {
+    "default_status": "compatible",
+    "notes": "lxml provides ARM64 wheels",
+    "recommendations": ["Ensure libxml2 and libxslt are ARM64 compatible"],
+    "version_ranges": [
+      {
+        "range": ">=4.6.0",
+        "status": "compatible",
+        "notes": "ARM64 wheels available"
+      }
+    ]
+  },
+  "psycopg2": {
+    "default_status": "unknown",
+    "notes": "psycopg2 may require compilation on ARM64",
+    "recommendations": ["Consider using psycopg2-binary for easier installation"],
+    "version_ranges": [
+      {
+        "range": "*",
+        "status": "unknown",
+        "notes": "May need PostgreSQL development headers"
+      }
+    ]
+  },
+  "psycopg2-binary": {
+    "default_status": "compatible",
+    "notes": "Binary distribution works on ARM64",
+    "recommendations": ["Preferred over psycopg2 for ARM64 deployment"],
+    "version_ranges": [
+      {
+        "range": ">=2.8.0",
+        "status": "compatible",
+        "notes": "ARM64 binary wheels available"
+      }
+    ]
+  }
+}

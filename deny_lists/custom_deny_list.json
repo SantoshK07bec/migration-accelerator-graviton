@@ -1,0 +1,26 @@
+{
+  "$schema": "../schemas/deny_list_schema.json",
+  "deny_list": [
+    {
+      "name": "python2",
+      "aliases": ["python2"],
+      "reason": "Python2 isn't recommended to be used on Graviton instances due to performance reasons",
+      "minimum_supported_version": null,
+      "recommended_alternative": "python3"
+    },
+    {
+      "name": "amd64",
+      "aliases": [],
+      "reason": "Package name with amd64 is likely not meant for arm64/Graviton",
+      "minimum_supported_version": null,
+      "recommended_alternative": "Use arm64 equivalent"
+    },
+    {
+      "name": "x86_64",
+      "aliases": ["x86"],
+      "reason": "Package name with x86/x86_64 is likely not meant for arm64/Graviton",
+      "minimum_supported_version": null,
+      "recommended_alternative": "Use arm64 equivalent"
+    }
+  ]
+}

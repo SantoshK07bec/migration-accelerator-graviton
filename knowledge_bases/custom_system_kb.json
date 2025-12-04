@@ -1,0 +1,442 @@
+{
+  "$schema": "../schemas/knowledge_base_schema.json",
+  "metadata": {
+    "version": "1.0",
+    "description": "System-level packages compatibility database for Graviton processors",
+    "created_date": "2025-01-27",
+    "maintainer": "Custom System KB",
+    "notes": "System packages, OS utilities, container runtimes, and low-level components"
+  },
+  "software_compatibility": [
+    {
+      "name": "docker",
+      "aliases": [
+        "docker-ce"
+      ],
+      "compatibility": {
+        "supported_versions": [
+          {
+            "version_range": ">=18.0",
+            "status": "compatible",
+            "notes": "Docker 18.0+ supported on Graviton"
+          }
+        ],
+        "minimum_supported_version": "18.0",
+        "recommended_version": null
+      }
+    },
+    {
+      "name": "git",
+      "aliases": [],
+      "compatibility": {
+        "supported_versions": [
+          {
+            "version_range": ">=2.17",
+            "status": "compatible",
+            "notes": "Git 2.17+ supported on Graviton"
+          }
+        ],
+        "minimum_supported_version": "2.17",
+        "recommended_version": null
+      }
+    },
+    {
+      "name": "kubelet",
+      "aliases": [
+        "kubernetes-kubelet"
+      ],
+      "compatibility": {
+        "supported_versions": [
+          {
+            "version_range": ">=1.15.0",
+            "status": "compatible",
+            "notes": "Kubernetes 1.15+ supports ARM64. Min: 1.15+"
+          }
+        ],
+        "minimum_supported_version": "1.15.0",
+        "recommended_version": "1.32.8"
+      }
+    },
+    {
+      "name": "containerd-shim",
+      "aliases": [
+        "containerd"
+      ],
+      "compatibility": {
+        "supported_versions": [
+          {
+            "version_range": ">=1.4.0",
+            "status": "compatible",
+            "notes": "Containerd has full ARM64 support. Min: 1.4+"
+          }
+        ],
+        "minimum_supported_version": "1.4.0",
+        "recommended_version": "1.7.27"
+      }
+    },
+    {
+      "name": "pause",
+      "aliases": [
+        "k8s-pause"
+      ],
+      "compatibility": {
+        "supported_versions": [
+          {
+            "version_range": ">=3.0",
+            "status": "compatible",
+            "notes": "Kubernetes pause container - ARM64 images available"
+          }
+        ],
+        "minimum_supported_version": "3.0",
+        "recommended_version": "3.9"
+      }
+    },
+    {
+      "name": "kube-proxy",
+      "aliases": [
+        "kubernetes-proxy"
+      ],
+      "compatibility": {
+        "supported_versions": [
+          {
+            "version_range": ">=1.15.0",
+            "status": "compatible",
+            "notes": "Kubernetes component - ARM64 supported in 1.15+"
+          }
+        ],
+        "minimum_supported_version": "1.15.0",
+        "recommended_version": "1.32.0"
+      }
+    },
+    {
+      "name": "aws-vpc-cni",
+      "aliases": [
+        "vpc-cni"
+      ],
+      "compatibility": {
+        "supported_versions": [
+          {
+            "version_range": ">=1.7.0",
+            "status": "compatible",
+            "notes": "AWS VPC CNI plugin - ARM64 support available"
+          }
+        ],
+        "minimum_supported_version": "1.7.0",
+        "recommended_version": "1.18.0"
+      }
+    },
+    {
+      "name": "aws-k8s-agent",
+      "aliases": [
+        "eks-agent"
+      ],
+      "compatibility": {
+        "supported_versions": [
+          {
+            "version_range": ">=1.0.0",
+            "status": "compatible",
+            "notes": "AWS Kubernetes agent - ARM64 compatible"
+          }
+        ],
+        "minimum_supported_version": "1.0.0",
+        "recommended_version": "latest"
+      }
+    },
+    {
+      "name": "aws-ebs-csi-driver",
+      "aliases": [
+        "ebs-csi",
+        "aws-ebs-csi-dri"
+      ],
+      "compatibility": {
+        "supported_versions": [
+          {
+            "version_range": ">=1.0.0",
+            "status": "compatible",
+            "notes": "AWS EBS CSI driver - ARM64 support available"
+          }
+        ],
+        "minimum_supported_version": "1.0.0",
+        "recommended_version": "1.35.0"
+      }
+    },
+    {
+      "name": "amazon-efs-mount-helper",
+      "aliases": [
+        "efs-utils",
+        "amazon-efs-moun"
+      ],
+      "compatibility": {
+        "supported_versions": [
+          {
+            "version_range": ">=1.0.0",
+            "status": "compatible",
+            "notes": "Amazon EFS mount helper - ARM64 compatible"
+          }
+        ],
+        "minimum_supported_version": "1.0.0",
+        "recommended_version": "2.0.0"
+      }
+    },
+    {
+      "name": "ssm-agent-worker",
+      "aliases": [
+        "ssm-agent",
+        "ssm-agent-worke"
+      ],
+      "compatibility": {
+        "supported_versions": [
+          {
+            "version_range": ">=3.0.0",
+            "status": "compatible",
+            "notes": "AWS SSM agent - ARM64 compatible"
+          }
+        ],
+        "minimum_supported_version": "3.0.0",
+        "recommended_version": "3.3.0"
+      }
+    },
+    {
+      "name": "livenessprobe",
+      "aliases": [],
+      "compatibility": {
+        "supported_versions": [
+          {
+            "version_range": ">=2.0.0",
+            "status": "compatible",
+            "notes": "Kubernetes liveness probe - ARM64 supported"
+          }
+        ],
+        "minimum_supported_version": "2.0.0",
+        "recommended_version": "2.12.0"
+      }
+    },
+    {
+      "name": "efs-proxy",
+      "aliases": [],
+      "compatibility": {
+        "supported_versions": [
+          {
+            "version_range": ">=1.0.0",
+            "status": "compatible",
+            "notes": "AWS EFS proxy - ARM64 compatible"
+          }
+        ],
+        "minimum_supported_version": "1.0.0",
+        "recommended_version": "2.0.0"
+      }
+    },
+    {
+      "name": "openssh",
+      "aliases": [
+        "sshd",
+        "openssh-server"
+      ],
+      "compatibility": {
+        "supported_versions": [
+          {
+            "version_range": ">=7.0",
+            "status": "compatible",
+            "notes": "OpenSSH secure shell - full ARM64 support"
+          }
+        ],
+        "minimum_supported_version": "7.0",
+        "recommended_version": "9.0"
+      }
+    },
+    {
+      "name": "lvmetad",
+      "aliases": [
+        "lvm-daemon"
+      ],
+      "compatibility": {
+        "supported_versions": [
+          {
+            "version_range": ">=2.02",
+            "status": "compatible",
+            "notes": "Linux LVM daemon - native ARM64 support"
+          }
+        ],
+        "minimum_supported_version": "2.02",
+        "recommended_version": "2.03"
+      }
+    },
+    {
+      "name": "bpfilter_umh",
+      "aliases": [
+        "bpfilter"
+      ],
+      "compatibility": {
+        "supported_versions": [
+          {
+            "version_range": ">=4.18",
+            "status": "compatible",
+            "notes": "Linux kernel module - native ARM64 support"
+          }
+        ],
+        "minimum_supported_version": "4.18",
+        "recommended_version": "5.4"
+      }
+    },
+    {
+      "name": "snmp_n",
+      "aliases": [
+        "snmpd",
+        "net-snmp"
+      ],
+      "compatibility": {
+        "supported_versions": [
+          {
+            "version_range": ">=5.8",
+            "status": "compatible",
+            "notes": "SNMP daemon - ARM64 support available"
+          }
+        ],
+        "minimum_supported_version": "5.8",
+        "recommended_version": "5.9"
+      }
+    },
+    {
+      "name": "coredns",
+      "aliases": [],
+      "compatibility": {
+        "supported_versions": [
+          {
+            "version_range": ">=1.8.0",
+            "status": "compatible",
+            "notes": "CoreDNS - ARM64 support available"
+          }
+        ],
+        "minimum_supported_version": "1.8.0",
+        "recommended_version": "1.11.0"
+      }
+    },
+    {
+      "name": "vim",
+      "aliases": [
+        "vi"
+      ],
+      "compatibility": {
+        "supported_versions": [
+          {
+            "version_range": ">=8.0",
+            "status": "compatible",
+            "notes": "Vim/Vi text editor - full ARM64 support"
+          }
+        ],
+        "minimum_supported_version": "8.0",
+        "recommended_version": "9.0.2153"
+      }
+    },
+    {
+      "name": "go-runner",
+      "aliases": [],
+      "compatibility": {
+        "supported_versions": [
+          {
+            "version_range": ">=1.0.0",
+            "status": "compatible",
+            "notes": "Go-based runner - ARM64 compatible"
+          }
+        ],
+        "minimum_supported_version": "1.0.0",
+        "recommended_version": "latest"
+      }
+    },
+    {
+      "name": "eks-pod-identity",
+      "aliases": [
+        "eks-pod-identit"
+      ],
+      "compatibility": {
+        "supported_versions": [
+          {
+            "version_range": ">=1.0.0",
+            "status": "compatible",
+            "notes": "AWS EKS Pod Identity - ARM64 compatible"
+          }
+        ],
+        "minimum_supported_version": "1.0.0",
+        "recommended_version": "latest"
+      }
+    },
+    {
+      "name": "agent-linux",
+      "aliases": [],
+      "compatibility": {
+        "supported_versions": [
+          {
+            "version_range": ">=1.0.0",
+            "status": "compatible",
+            "notes": "Linux agent - ARM64 compatible"
+          }
+        ],
+        "minimum_supported_version": "1.0.0",
+        "recommended_version": "latest"
+      }
+    },
+    {
+      "name": "collector-linux",
+      "aliases": [],
+      "compatibility": {
+        "supported_versions": [
+          {
+            "version_range": ">=1.0.0",
+            "status": "compatible",
+            "notes": "Linux collector - ARM64 compatible"
+          }
+        ],
+        "minimum_supported_version": "1.0.0",
+        "recommended_version": "latest"
+      }
+    },
+    {
+      "name": "tini",
+      "aliases": [],
+      "compatibility": {
+        "supported_versions": [
+          {
+            "version_range": ">=0.19.0",
+            "status": "compatible",
+            "notes": "Tini init system - ARM64 support available"
+          }
+        ],
+        "minimum_supported_version": "0.19.0",
+        "recommended_version": "0.19.0"
+      }
+    },
+    {
+      "name": "query-linux",
+      "aliases": [],
+      "compatibility": {
+        "supported_versions": [
+          {
+            "version_range": ">=1.0.0",
+            "status": "compatible",
+            "notes": "Linux query service - ARM64 compatible"
+          }
+        ],
+        "minimum_supported_version": "1.0.0",
+        "recommended_version": "latest"
+      }
+    },
+    {
+      "name": "gnupg",
+      "aliases": [
+        "gpg",
+        "gpg-agent"
+      ],
+      "compatibility": {
+        "supported_versions": [
+          {
+            "version_range": ">=2.2.0",
+            "status": "compatible",
+            "notes": "GnuPG cryptographic software - ARM64 support available"
+          }
+        ],
+        "minimum_supported_version": "2.2.0",
+        "recommended_version": "2.4.0"
+      }
+    }
+  ]
+}

@@ -1,0 +1,268 @@
+{
+  "runtime_type": "ruby",
+  "version": "1.0",
+  "description": "Ruby gem compatibility data for ARM64/Graviton processors",
+  "software_compatibility": [
+    {
+      "name": "nokogiri",
+      "aliases": ["nokogiri"],
+      "compatibility": {
+        "supported_versions": [
+          {
+            "version_range": ">=1.12.0",
+            "status": "compatible",
+            "notes": "ARM64 precompiled gems available from 1.12.0+. Native extensions compile successfully on ARM64.",
+            "confidence_level": 1.0
+          },
+          {
+            "version_range": "<1.12.0",
+            "status": "needs_upgrade",
+            "notes": "Upgrade to 1.12.0+ for ARM64 precompiled gems. Older versions require manual compilation.",
+            "confidence_level": 0.9
+          }
+        ],
+        "minimum_supported_version": "1.12.0",
+        "recommended_version": "1.13.0"
+      }
+    },
+    {
+      "name": "rails",
+      "aliases": ["rails", "railties"],
+      "compatibility": {
+        "supported_versions": [
+          {
+            "version_range": ">=6.0.0",
+            "status": "compatible",
+            "notes": "Rails 6.0+ has excellent ARM64 support with all components tested on Graviton.",
+            "confidence_level": 1.0
+          },
+          {
+            "version_range": ">=5.0.0,<6.0.0",
+            "status": "needs_upgrade",
+            "notes": "Rails 5.x works on ARM64 but consider upgrading to 6.0+ for better support and performance.",
+            "confidence_level": 0.8
+          }
+        ],
+        "minimum_supported_version": "5.0.0",
+        "recommended_version": "7.0.0"
+      }
+    },
+    {
+      "name": "ffi",
+      "aliases": ["ffi"],
+      "compatibility": {
+        "supported_versions": [
+          {
+            "version_range": ">=1.15.0",
+            "status": "compatible",
+            "notes": "FFI 1.15.0+ includes ARM64 support and precompiled gems.",
+            "confidence_level": 1.0
+          },
+          {
+            "version_range": "<1.15.0",
+            "status": "needs_verification",
+            "notes": "Older FFI versions may require manual compilation on ARM64. Test thoroughly.",
+            "confidence_level": 0.7
+          }
+        ],
+        "minimum_supported_version": "1.15.0",
+        "recommended_version": "1.15.5"
+      }
+    },
+    {
+      "name": "pg",
+      "aliases": ["pg"],
+      "compatibility": {
+        "supported_versions": [
+          {
+            "version_range": ">=1.2.0",
+            "status": "compatible",
+            "notes": "PostgreSQL adapter works well on ARM64 with proper native library compilation.",
+            "confidence_level": 0.9
+          }
+        ],
+        "minimum_supported_version": "1.2.0"
+      }
+    },
+    {
+      "name": "mysql2",
+      "aliases": ["mysql2"],
+      "compatibility": {
+        "supported_versions": [
+          {
+            "version_range": ">=0.5.0",
+            "status": "compatible",
+            "notes": "MySQL2 adapter compatible with ARM64 when MySQL client libraries are available.",
+            "confidence_level": 0.9
+          }
+        ],
+        "minimum_supported_version": "0.5.0"
+      }
+    },
+    {
+      "name": "sassc",
+      "aliases": ["sassc"],
+      "compatibility": {
+        "supported_versions": [
+          {
+            "version_range": ">=2.4.0",
+            "status": "compatible",
+            "notes": "SassC includes ARM64 support and precompiled binaries.",
+            "confidence_level": 0.9
+          },
+          {
+            "version_range": "<2.4.0",
+            "status": "needs_verification",
+            "notes": "Older SassC versions may require manual compilation. Consider upgrading.",
+            "confidence_level": 0.6
+          }
+        ],
+        "minimum_supported_version": "2.4.0",
+        "recommended_version": "2.4.0"
+      }
+    },
+    {
+      "name": "bootsnap",
+      "aliases": ["bootsnap"],
+      "compatibility": {
+        "supported_versions": [
+          {
+            "version_range": ">=1.7.0",
+            "status": "compatible",
+            "notes": "Bootsnap 1.7.0+ includes ARM64 optimizations and precompiled extensions.",
+            "confidence_level": 1.0
+          },
+          {
+            "version_range": "<1.7.0",
+            "status": "needs_upgrade",
+            "notes": "Upgrade to 1.7.0+ for ARM64 optimizations and better performance.",
+            "confidence_level": 0.8
+          }
+        ],
+        "minimum_supported_version": "1.7.0",
+        "recommended_version": "1.16.0"
+      }
+    },
+    {
+      "name": "puma",
+      "aliases": ["puma"],
+      "compatibility": {
+        "supported_versions": [
+          {
+            "version_range": ">=5.0.0",
+            "status": "compatible",
+            "notes": "Puma 5.0+ has excellent ARM64 support and performance optimizations.",
+            "confidence_level": 1.0
+          },
+          {
+            "version_range": ">=4.0.0,<5.0.0",
+            "status": "needs_upgrade",
+            "notes": "Puma 4.x works on ARM64 but upgrade to 5.0+ for better performance.",
+            "confidence_level": 0.8
+          }
+        ],
+        "minimum_supported_version": "4.0.0",
+        "recommended_version": "6.0.0"
+      }
+    },
+    {
+      "name": "unicorn",
+      "aliases": ["unicorn"],
+      "compatibility": {
+        "supported_versions": [
+          {
+            "version_range": ">=6.0.0",
+            "status": "compatible",
+            "notes": "Unicorn 6.0+ supports ARM64 architecture.",
+            "confidence_level": 0.9
+          }
+        ],
+        "minimum_supported_version": "6.0.0"
+      }
+    },
+    {
+      "name": "redis",
+      "aliases": ["redis"],
+      "compatibility": {
+        "supported_versions": [
+          {
+            "version_range": ">=4.0.0",
+            "status": "compatible",
+            "notes": "Redis Ruby client is pure Ruby and fully compatible with ARM64.",
+            "confidence_level": 1.0
+          }
+        ]
+      }
+    },
+    {
+      "name": "sidekiq",
+      "aliases": ["sidekiq"],
+      "compatibility": {
+        "supported_versions": [
+          {
+            "version_range": ">=6.0.0",
+            "status": "compatible",
+            "notes": "Sidekiq is pure Ruby and fully compatible with ARM64.",
+            "confidence_level": 1.0
+          }
+        ]
+      }
+    },
+    {
+      "name": "rspec",
+      "aliases": ["rspec", "rspec-core", "rspec-expectations", "rspec-mocks"],
+      "compatibility": {
+        "supported_versions": [
+          {
+            "version_range": ">=3.0.0",
+            "status": "compatible",
+            "notes": "RSpec is pure Ruby and fully compatible with ARM64.",
+            "confidence_level": 1.0
+          }
+        ]
+      }
+    },
+    {
+      "name": "devise",
+      "aliases": ["devise"],
+      "compatibility": {
+        "supported_versions": [
+          {
+            "version_range": ">=4.0.0",
+            "status": "compatible",
+            "notes": "Devise is pure Ruby and fully compatible with ARM64.",
+            "confidence_level": 1.0
+          }
+        ]
+      }
+    },
+    {
+      "name": "activerecord",
+      "aliases": ["activerecord"],
+      "compatibility": {
+        "supported_versions": [
+          {
+            "version_range": ">=6.0.0",
+            "status": "compatible",
+            "notes": "ActiveRecord 6.0+ has excellent ARM64 support.",
+            "confidence_level": 1.0
+          }
+        ]
+      }
+    },
+    {
+      "name": "activesupport",
+      "aliases": ["activesupport"],
+      "compatibility": {
+        "supported_versions": [
+          {
+            "version_range": ">=6.0.0",
+            "status": "compatible",
+            "notes": "ActiveSupport is pure Ruby and fully compatible with ARM64.",
+            "confidence_level": 1.0
+          }
+        ]
+      }
+    }
+  ]
+}

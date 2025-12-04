@@ -1,0 +1,12 @@
+{
+  "$schema": "../schemas/deny_list_schema.json",
+  "deny_list": [
+    {
+      "name": "mssql-server",
+      "aliases": ["microsoft-sql-server", "sqlserver", "mssql"],
+      "reason": "Microsoft SQL Server does not support ARM64/Graviton architecture (Linux x86_64 only)",
+      "minimum_supported_version": null,
+      "recommended_alternative": "postgresql"
+    }
+  ]
+}

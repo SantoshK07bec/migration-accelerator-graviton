@@ -1,0 +1,2092 @@
+{
+  "$schema": "./knowledge_base_schema.json",
+  "metadata": {
+    "version": "1.0",
+    "description": "ISV products with official Graviton support",
+    "created_date": "2025-09-26",
+    "maintainer": "ISV Markdown Scraper",
+    "notes": "Auto-generated from ISV markdown file"
+  },
+  "software_compatibility": [
+    {
+      "name": "confluent platform",
+      "aliases": [
+        "confluent"
+      ],
+      "description": "Confluent Platform by Confluent - ISV product with Graviton support",
+      "compatibility": {
+        "supported_versions": [
+          {
+            "version_range": "",
+            "status": "compatible",
+            "notes": "ISV product in Analytics category with official Graviton support"
+          }
+        ],
+        "minimum_supported_version": null,
+        "recommended_version": null,
+        "documentation_links": [
+          "https://www.confluent.io/blog/introducing-confluent-platform-7-6/#arm64-support",
+          "https://docs.confluent.io/platform/current/installation/system-requirements.html"
+        ]
+      }
+    },
+    {
+      "name": "databricks lakehouse",
+      "aliases": [
+        "databricks"
+      ],
+      "description": "Databricks Lakehouse by Databricks - ISV product with Graviton support",
+      "compatibility": {
+        "supported_versions": [
+          {
+            "version_range": "",
+            "status": "compatible",
+            "notes": "ISV product in Analytics category with official Graviton support"
+          }
+        ],
+        "minimum_supported_version": null,
+        "recommended_version": null,
+        "documentation_links": [
+          "https://databricks.com/blog/2022/04/18/announcing-databricks-support-for-aws-graviton2-with-up-to-3x-better-price-performance.html",
+          "https://docs.databricks.com/clusters/graviton.html"
+        ]
+      }
+    },
+    {
+      "name": "iris (community edition)",
+      "aliases": [
+        "intersystems"
+      ],
+      "description": "IRIS (Community Edition) by InterSystems - ISV product with Graviton support",
+      "compatibility": {
+        "supported_versions": [
+          {
+            "version_range": "",
+            "status": "compatible",
+            "notes": "ISV product in Analytics category with official Graviton support"
+          }
+        ],
+        "minimum_supported_version": null,
+        "recommended_version": null,
+        "documentation_links": [
+          "https://aws.amazon.com/marketplace/pp/B08629M8S4",
+          "https://community.intersystems.com/post/intersystems-iris-now-available-aws-graviton2-based-amazon-ec2-instances"
+        ]
+      }
+    },
+    {
+      "name": "splunk cloud platform",
+      "aliases": [
+        "splunk"
+      ],
+      "description": "Splunk Cloud Platform by Splunk - ISV product with Graviton support",
+      "compatibility": {
+        "supported_versions": [
+          {
+            "version_range": "",
+            "status": "compatible",
+            "notes": "ISV product in Analytics category with official Graviton support"
+          }
+        ],
+        "minimum_supported_version": null,
+        "recommended_version": null,
+        "documentation_links": [
+          "https://www.splunk.com/en_us/blog/platform/splunk-embarks-on-aws-graviton-journey-with-amazon-ec2-im4gn-and-is4gen-instances.html"
+        ]
+      }
+    },
+    {
+      "name": "starburst enterprise",
+      "aliases": [
+        "starburst"
+      ],
+      "description": "Starburst Enterprise by Starburst - ISV product with Graviton support",
+      "compatibility": {
+        "supported_versions": [
+          {
+            "version_range": "",
+            "status": "compatible",
+            "notes": "ISV product in Analytics category with official Graviton support"
+          }
+        ],
+        "minimum_supported_version": null,
+        "recommended_version": null,
+        "documentation_links": [
+          "https://aws.amazon.com/marketplace/pp/prodview-2bpppdqlesn6w",
+          "https://docs.starburst.io/361-e/release/release-360-e.html"
+        ]
+      }
+    },
+    {
+      "name": "anbox cloud",
+      "aliases": [
+        "canonical"
+      ],
+      "description": "Anbox Cloud by Canonical - ISV product with Graviton support",
+      "compatibility": {
+        "supported_versions": [
+          {
+            "version_range": "",
+            "status": "compatible",
+            "notes": "ISV product in Android category with official Graviton support"
+          }
+        ],
+        "minimum_supported_version": null,
+        "recommended_version": null,
+        "documentation_links": [
+          "https://aws.amazon.com/marketplace/pp/prodview-aqmdt52vqs5qk",
+          "https://anbox-cloud.io/docs/tut/installing-appliance",
+          "https://ubuntu.com/blog/canonical-achieves-aws-graviton-ready-designation"
+        ]
+      }
+    },
+    {
+      "name": "genymotion cloud",
+      "aliases": [
+        "genymobile"
+      ],
+      "description": "Genymotion Cloud by Genymobile - ISV product with Graviton support",
+      "compatibility": {
+        "supported_versions": [
+          {
+            "version_range": "",
+            "status": "compatible",
+            "notes": "ISV product in Android category with official Graviton support"
+          }
+        ],
+        "minimum_supported_version": null,
+        "recommended_version": null,
+        "documentation_links": [
+          "https://aws.amazon.com/marketplace/pp/B08KHVZWMJ",
+          "https://www.genymotion.com/blog/just-launched-arm-native-android-in-the-cloud-environment-on-aws/"
+        ]
+      }
+    },
+    {
+      "name": "consul",
+      "aliases": [
+        "hashicorp"
+      ],
+      "description": "Consul by HashiCorp - ISV product with Graviton support",
+      "compatibility": {
+        "supported_versions": [
+          {
+            "version_range": "",
+            "status": "compatible",
+            "notes": "ISV product in Containers category with official Graviton support"
+          }
+        ],
+        "minimum_supported_version": null,
+        "recommended_version": null,
+        "documentation_links": [
+          "https://www.consul.io/downloads",
+          "https://github.com/hashicorp/consul/blob/v0.8.4/CHANGELOG.md"
+        ]
+      }
+    },
+    {
+      "name": "docker build cloud",
+      "aliases": [
+        "docker"
+      ],
+      "description": "Docker Build Cloud by Docker - ISV product with Graviton support",
+      "compatibility": {
+        "supported_versions": [
+          {
+            "version_range": "",
+            "status": "compatible",
+            "notes": "ISV product in Containers category with official Graviton support"
+          }
+        ],
+        "minimum_supported_version": null,
+        "recommended_version": null,
+        "documentation_links": [
+          "https://www.docker.com/products/build-cloud/",
+          "https://www.docker.com/blog/introducing-docker-build-cloud/"
+        ]
+      }
+    },
+    {
+      "name": "flatcar container linux",
+      "aliases": [
+        "kinvolk"
+      ],
+      "description": "Flatcar Container Linux by Kinvolk - ISV product with Graviton support",
+      "compatibility": {
+        "supported_versions": [
+          {
+            "version_range": "",
+            "status": "compatible",
+            "notes": "ISV product in Containers category with official Graviton support"
+          }
+        ],
+        "minimum_supported_version": null,
+        "recommended_version": null,
+        "documentation_links": [
+          "https://kinvolk.io/flatcar-container-linux/releases/",
+          "https://kinvolk.io/docs/flatcar-container-linux/latest/installing/cloud/aws-ec2/"
+        ]
+      }
+    },
+    {
+      "name": "openshift container platform",
+      "aliases": [
+        "red hat"
+      ],
+      "description": "OpenShift Container Platform by Red Hat - ISV product with Graviton support",
+      "compatibility": {
+        "supported_versions": [
+          {
+            "version_range": "",
+            "status": "compatible",
+            "notes": "ISV product in Containers category with official Graviton support"
+          }
+        ],
+        "minimum_supported_version": null,
+        "recommended_version": null,
+        "documentation_links": [
+          "https://access.redhat.com/documentation/en-us/openshift_container_platform/4.10/html-single/release_notes/index#ocp-4-10-OCP-on-ARM",
+          "https://cloud.redhat.com/blog/introducing-red-hat-openshift-4.10"
+        ]
+      }
+    },
+    {
+      "name": "rosa hcp",
+      "aliases": [
+        "red hat"
+      ],
+      "description": "ROSA HCP by Red Hat - ISV product with Graviton support",
+      "compatibility": {
+        "supported_versions": [
+          {
+            "version_range": "",
+            "status": "compatible",
+            "notes": "ISV product in Containers category with official Graviton support"
+          }
+        ],
+        "minimum_supported_version": null,
+        "recommended_version": null,
+        "documentation_links": [
+          "https://docs.redhat.com/en/documentation/red_hat_openshift_service_on_aws/4/html-single/introduction_to_rosa/index#rosa-sdpolicy-aws-instance-types-graviton_rosa-hcp-instance-types"
+        ]
+      }
+    },
+    {
+      "name": "anaconda",
+      "aliases": [],
+      "description": "Anaconda by Anaconda - ISV product with Graviton support",
+      "compatibility": {
+        "supported_versions": [
+          {
+            "version_range": "",
+            "status": "compatible",
+            "notes": "ISV product in Data Science & ML category with official Graviton support"
+          }
+        ],
+        "minimum_supported_version": null,
+        "recommended_version": null,
+        "documentation_links": [
+          "https://docs.anaconda.com/anaconda/install/graviton2/",
+          "https://repo.anaconda.com/pkgs/main/linux-aarch64/",
+          "https://www.anaconda.com/blog/anaconda-aws-graviton2"
+        ]
+      }
+    },
+    {
+      "name": "aerospike database",
+      "aliases": [
+        "aerospike"
+      ],
+      "description": "Aerospike Database by Aerospike - ISV product with Graviton support",
+      "compatibility": {
+        "supported_versions": [
+          {
+            "version_range": "",
+            "status": "compatible",
+            "notes": "ISV product in Database category with official Graviton support"
+          }
+        ],
+        "minimum_supported_version": null,
+        "recommended_version": null,
+        "documentation_links": [
+          "https://aerospike.com/news/press-release/announcing-aerospike-on-graviton3/)"
+        ]
+      }
+    },
+    {
+      "name": "keydb professional",
+      "aliases": [
+        "eq alpha"
+      ],
+      "description": "KeyDB Professional by EQ Alpha - ISV product with Graviton support",
+      "compatibility": {
+        "supported_versions": [
+          {
+            "version_range": "",
+            "status": "compatible",
+            "notes": "ISV product in Database category with official Graviton support"
+          }
+        ],
+        "minimum_supported_version": null,
+        "recommended_version": null,
+        "documentation_links": [
+          "https://keydb.dev/downloads.html",
+          "https://docs.keydb.dev/blog/2020/03/02/blog-post/"
+        ]
+      }
+    },
+    {
+      "name": "elasticsearch",
+      "aliases": [
+        "elastic"
+      ],
+      "description": "Elasticsearch by Elastic - ISV product with Graviton support",
+      "compatibility": {
+        "supported_versions": [
+          {
+            "version_range": "",
+            "status": "compatible",
+            "notes": "ISV product in Database category with official Graviton support"
+          }
+        ],
+        "minimum_supported_version": null,
+        "recommended_version": null,
+        "documentation_links": [
+          "https://www.elastic.co/downloads/elasticsearch",
+          "https://www.elastic.co/blog/elasticsearch-on-arm"
+        ]
+      }
+    },
+    {
+      "name": "heimdall proxy enterprise edition",
+      "aliases": [
+        "heimdall data"
+      ],
+      "description": "Heimdall Proxy Enterprise Edition by Heimdall Data - ISV product with Graviton support",
+      "compatibility": {
+        "supported_versions": [
+          {
+            "version_range": "",
+            "status": "compatible",
+            "notes": "ISV product in Database category with official Graviton support"
+          }
+        ],
+        "minimum_supported_version": null,
+        "recommended_version": null,
+        "documentation_links": [
+          "https://aws.amazon.com/marketplace/pp/B08CL15V3N",
+          "https://aws.amazon.com/marketplace/pp/B08CL15V3N"
+        ]
+      }
+    },
+    {
+      "name": "server (community & enterprise)",
+      "aliases": [
+        "mongodb"
+      ],
+      "description": "Server (Community & Enterprise) by MongoDB - ISV product with Graviton support",
+      "compatibility": {
+        "supported_versions": [
+          {
+            "version_range": "",
+            "status": "compatible",
+            "notes": "ISV product in Database category with official Graviton support"
+          }
+        ],
+        "minimum_supported_version": null,
+        "recommended_version": null,
+        "documentation_links": [
+          "https://www.mongodb.com/try/download",
+          "https://docs.mongodb.com/manual/installation/"
+        ]
+      }
+    },
+    {
+      "name": "oracle instant client",
+      "aliases": [
+        "oracle"
+      ],
+      "description": "Oracle Instant Client by Oracle - ISV product with Graviton support",
+      "compatibility": {
+        "supported_versions": [
+          {
+            "version_range": "",
+            "status": "compatible",
+            "notes": "ISV product in Database category with official Graviton support"
+          }
+        ],
+        "minimum_supported_version": null,
+        "recommended_version": null,
+        "documentation_links": [
+          "https://www.oracle.com/database/technologies/instant-client/linux-arm-aarch64-downloads.html",
+          "https://blogs.oracle.com/opal/post/oracle-instant-client-for-linux-arm-aarch64"
+        ]
+      }
+    },
+    {
+      "name": "arangodb enterprise",
+      "aliases": [
+        "arangodb"
+      ],
+      "description": "ArangoDB Enterprise by ArangoDB - ISV product with Graviton support",
+      "compatibility": {
+        "supported_versions": [
+          {
+            "version_range": "",
+            "status": "compatible",
+            "notes": "ISV product in Database category with official Graviton support"
+          }
+        ],
+        "minimum_supported_version": null,
+        "recommended_version": null,
+        "documentation_links": [
+          "https://arangodb.com/download-arangodb-enterprise/",
+          "https://arangodb.com/download-arangodb-enterprise/install-enterprise/docker-3-12/"
+        ]
+      }
+    },
+    {
+      "name": "enterprise edition server on amazon linux 2 - graviton",
+      "aliases": [
+        "couchbase"
+      ],
+      "description": "Enterprise Edition Server on Amazon Linux 2 - Graviton by Couchbase - ISV product with Graviton support",
+      "compatibility": {
+        "supported_versions": [
+          {
+            "version_range": "",
+            "status": "compatible",
+            "notes": "ISV product in Database category with official Graviton support"
+          }
+        ],
+        "minimum_supported_version": null,
+        "recommended_version": null,
+        "documentation_links": [
+          "https://aws.amazon.com/marketplace/pp/prodview-fozt4ivft2tsa)"
+        ]
+      }
+    },
+    {
+      "name": "enterprise server on amazon linux 2 - graviton (gold support)",
+      "aliases": [
+        "couchbase"
+      ],
+      "description": "Enterprise Server on Amazon Linux 2 - Graviton (Gold Support) by Couchbase - ISV product with Graviton support",
+      "compatibility": {
+        "supported_versions": [
+          {
+            "version_range": "",
+            "status": "compatible",
+            "notes": "ISV product in Database category with official Graviton support"
+          }
+        ],
+        "minimum_supported_version": null,
+        "recommended_version": null,
+        "documentation_links": [
+          "https://aws.amazon.com/marketplace/pp/prodview-fozt4ivft2tsa)"
+        ]
+      }
+    },
+    {
+      "name": "agent",
+      "aliases": [
+        "buildkite"
+      ],
+      "description": "Agent by Buildkite - ISV product with Graviton support",
+      "compatibility": {
+        "supported_versions": [
+          {
+            "version_range": "",
+            "status": "compatible",
+            "notes": "ISV product in DevOps category with official Graviton support"
+          }
+        ],
+        "minimum_supported_version": null,
+        "recommended_version": null,
+        "documentation_links": [
+          "https://github.com/buildkite/agent/releases",
+          "https://buildkite.com/blog/buildkites-transition-to-arm"
+        ]
+      }
+    },
+    {
+      "name": "elastic ci stack for aws",
+      "aliases": [
+        "buildkite"
+      ],
+      "description": "Elastic CI Stack for AWS by Buildkite - ISV product with Graviton support",
+      "compatibility": {
+        "supported_versions": [
+          {
+            "version_range": "",
+            "status": "compatible",
+            "notes": "ISV product in DevOps category with official Graviton support"
+          }
+        ],
+        "minimum_supported_version": null,
+        "recommended_version": null,
+        "documentation_links": [
+          "https://buildkite.com/changelog/115-aws-elastic-stack-support-for-arm-instances-rocket",
+          "https://buildkite.com/blog/buildkites-transition-to-arm"
+        ]
+      }
+    },
+    {
+      "name": "circleci",
+      "aliases": [],
+      "description": "CircleCI by CircleCI - ISV product with Graviton support",
+      "compatibility": {
+        "supported_versions": [
+          {
+            "version_range": "",
+            "status": "compatible",
+            "notes": "ISV product in DevOps category with official Graviton support"
+          }
+        ],
+        "minimum_supported_version": null,
+        "recommended_version": null,
+        "documentation_links": [
+          "https://circleci.com/docs/2.0/arm-resources/",
+          "https://www.businesswire.com/news/home/20210330005259/en/CircleCI-Extends-Arm-Support-to-its-CICD-Cloud-Offering"
+        ]
+      }
+    },
+    {
+      "name": "self-hosted runner",
+      "aliases": [
+        "circleci"
+      ],
+      "description": "Self-hosted Runner by CircleCI - ISV product with Graviton support",
+      "compatibility": {
+        "supported_versions": [
+          {
+            "version_range": "",
+            "status": "compatible",
+            "notes": "ISV product in DevOps category with official Graviton support"
+          }
+        ],
+        "minimum_supported_version": null,
+        "recommended_version": null,
+        "documentation_links": [
+          "https://circleci.com/docs/2.0/runner-installation/#supported-platforms",
+          "https://circleci.com/blog/self-hosted-runners-add-arm-support-to-circleci/"
+        ]
+      }
+    },
+    {
+      "name": "kernelcare",
+      "aliases": [
+        "cloudlinux"
+      ],
+      "description": "KernelCare by CloudLinux - ISV product with Graviton support",
+      "compatibility": {
+        "supported_versions": [
+          {
+            "version_range": "",
+            "status": "compatible",
+            "notes": "ISV product in DevOps category with official Graviton support"
+          }
+        ],
+        "minimum_supported_version": null,
+        "recommended_version": null,
+        "documentation_links": [
+          "https://aws.amazon.com/marketplace/pp/Cloud-Linux-KernelCare/B085ZLFK7B",
+          "https://aws.amazon.com/blogs/apn/live-patching-linux-without-downtime-on-aws-graviton2-instances/"
+        ]
+      }
+    },
+    {
+      "name": "github actions self-hosted runner",
+      "aliases": [
+        "github"
+      ],
+      "description": "GitHub Actions Self-hosted Runner by GitHub - ISV product with Graviton support",
+      "compatibility": {
+        "supported_versions": [
+          {
+            "version_range": "",
+            "status": "compatible",
+            "notes": "ISV product in DevOps category with official Graviton support"
+          }
+        ],
+        "minimum_supported_version": null,
+        "recommended_version": null,
+        "documentation_links": [
+          "https://github.com/actions/runner/releases",
+          "https://github.blog/changelog/2019-12-03-github-actions-self-hosted-runners-on-arm-architectures/"
+        ]
+      }
+    },
+    {
+      "name": "gitlab runner",
+      "aliases": [
+        "gitlab"
+      ],
+      "description": "GitLab Runner by GitLab - ISV product with Graviton support",
+      "compatibility": {
+        "supported_versions": [
+          {
+            "version_range": "",
+            "status": "compatible",
+            "notes": "ISV product in DevOps category with official Graviton support"
+          }
+        ],
+        "minimum_supported_version": null,
+        "recommended_version": null,
+        "documentation_links": [
+          "https://gitlab-runner-downloads.s3.amazonaws.com/latest/index.html",
+          "https://about.gitlab.com/blog/2020/05/15/gitlab-arm-aws-graviton2-solution/"
+        ]
+      }
+    },
+    {
+      "name": "gagent",
+      "aliases": [
+        "granulate"
+      ],
+      "description": "gAgent by Granulate - ISV product with Graviton support",
+      "compatibility": {
+        "supported_versions": [
+          {
+            "version_range": "",
+            "status": "compatible",
+            "notes": "ISV product in DevOps category with official Graviton support"
+          }
+        ],
+        "minimum_supported_version": null,
+        "recommended_version": null,
+        "documentation_links": [
+          "https://docs.granulate.io/gagent/the-gagent",
+          "https://granulate.io/granulate-aws-graviton-computing-optimization/"
+        ]
+      }
+    },
+    {
+      "name": "drone (runner & server)",
+      "aliases": [
+        "harness (drone.io)"
+      ],
+      "description": "Drone (Runner & Server) by Harness (Drone.io) - ISV product with Graviton support",
+      "compatibility": {
+        "supported_versions": [
+          {
+            "version_range": "",
+            "status": "compatible",
+            "notes": "ISV product in DevOps category with official Graviton support"
+          }
+        ],
+        "minimum_supported_version": null,
+        "recommended_version": null,
+        "documentation_links": [
+          "https://docs.drone.io/runner/docker/installation/linux/",
+          "https://blog.drone.io/drone-announces-official-support-for-arm/"
+        ]
+      }
+    },
+    {
+      "name": "terraform",
+      "aliases": [
+        "hashicorp"
+      ],
+      "description": "Terraform by HashiCorp - ISV product with Graviton support",
+      "compatibility": {
+        "supported_versions": [
+          {
+            "version_range": "",
+            "status": "compatible",
+            "notes": "ISV product in DevOps category with official Graviton support"
+          }
+        ],
+        "minimum_supported_version": null,
+        "recommended_version": null,
+        "documentation_links": [
+          "https://www.terraform.io/downloads.html",
+          "https://www.hashicorp.com/blog/announcing-hashicorp-terraform-0-14-beta"
+        ]
+      }
+    },
+    {
+      "name": "vault",
+      "aliases": [
+        "hashicorp"
+      ],
+      "description": "Vault by HashiCorp - ISV product with Graviton support",
+      "compatibility": {
+        "supported_versions": [
+          {
+            "version_range": "",
+            "status": "compatible",
+            "notes": "ISV product in DevOps category with official Graviton support"
+          }
+        ],
+        "minimum_supported_version": null,
+        "recommended_version": null,
+        "documentation_links": [
+          "https://www.vaultproject.io/downloads",
+          "https://github.com/hashicorp/vault/milestone/17?closed=1"
+        ]
+      }
+    },
+    {
+      "name": "chef infra client",
+      "aliases": [
+        "progress (chef)"
+      ],
+      "description": "Chef Infra Client by Progress (Chef) - ISV product with Graviton support",
+      "compatibility": {
+        "supported_versions": [
+          {
+            "version_range": "",
+            "status": "compatible",
+            "notes": "ISV product in DevOps category with official Graviton support"
+          }
+        ],
+        "minimum_supported_version": null,
+        "recommended_version": null,
+        "documentation_links": [
+          "https://downloads.chef.io/products/infra-client",
+          "https://www.chef.io/press-release/chef-infra-16-empowers-experts-and-simplifies-adoption-for-new-users"
+        ]
+      }
+    },
+    {
+      "name": "puppet enterprise: agent",
+      "aliases": [
+        "puppet"
+      ],
+      "description": "Puppet Enterprise: Agent by Puppet - ISV product with Graviton support",
+      "compatibility": {
+        "supported_versions": [
+          {
+            "version_range": "",
+            "status": "compatible",
+            "notes": "ISV product in DevOps category with official Graviton support"
+          }
+        ],
+        "minimum_supported_version": null,
+        "recommended_version": null,
+        "documentation_links": [
+          "https://puppet.com/docs/pe/latest/supported_operating_systems.html",
+          "https://puppet.com/blog/puppet-enterprise-adds-arm-high-sierra-support-ssl-curl-updates/"
+        ]
+      }
+    },
+    {
+      "name": "teleport unified access plane",
+      "aliases": [
+        "teleport (gravitational)"
+      ],
+      "description": "Teleport Unified Access Plane by Teleport (Gravitational) - ISV product with Graviton support",
+      "compatibility": {
+        "supported_versions": [
+          {
+            "version_range": "",
+            "status": "compatible",
+            "notes": "ISV product in DevOps category with official Graviton support"
+          }
+        ],
+        "minimum_supported_version": null,
+        "recommended_version": null,
+        "documentation_links": [
+          "https://goteleport.com/teleport/download/",
+          "https://goteleport.com/teleport/docs/changelog/#500"
+        ]
+      }
+    },
+    {
+      "name": "tetrate istio subscription",
+      "aliases": [
+        "tetrate"
+      ],
+      "description": "Tetrate Istio Subscription by Tetrate - ISV product with Graviton support",
+      "compatibility": {
+        "supported_versions": [
+          {
+            "version_range": "",
+            "status": "compatible",
+            "notes": "ISV product in DevOps category with official Graviton support"
+          }
+        ],
+        "minimum_supported_version": null,
+        "recommended_version": null,
+        "documentation_links": [
+          "https://aws.amazon.com/marketplace/pp/prodview-r2kdhgz2mmocm)",
+          "https://www.tetrate.io/blog/tetrate-expands-aws-partnership-to-bring-enterprise-grade-istio-for-eks-and-eks-distro/)"
+        ]
+      }
+    },
+    {
+      "name": "travis ci (saas)",
+      "aliases": [
+        "travis ci"
+      ],
+      "description": "Travis CI (SaaS) by Travis CI - ISV product with Graviton support",
+      "compatibility": {
+        "supported_versions": [
+          {
+            "version_range": "",
+            "status": "compatible",
+            "notes": "ISV product in DevOps category with official Graviton support"
+          }
+        ],
+        "minimum_supported_version": null,
+        "recommended_version": null,
+        "documentation_links": [
+          "https://docs.travis-ci.com/user/multi-cpu-architectures/",
+          "https://blog.travis-ci.com/2020-09-11-arm-on-aws"
+        ]
+      }
+    },
+    {
+      "name": "zulu enterprise openjdk",
+      "aliases": [
+        "azul"
+      ],
+      "description": "Zulu Enterprise OpenJDK by Azul - ISV product with Graviton support",
+      "compatibility": {
+        "supported_versions": [
+          {
+            "version_range": "",
+            "status": "compatible",
+            "notes": "ISV product in Development category with official Graviton support"
+          }
+        ],
+        "minimum_supported_version": null,
+        "recommended_version": null,
+        "documentation_links": [
+          "https://www.azul.com/downloads/zulu/",
+          "https://www.azul.com/products/zulu-system-specifications/"
+        ]
+      }
+    },
+    {
+      "name": "cloud native developer platform saas",
+      "aliases": [
+        "giant swarm"
+      ],
+      "description": "Cloud Native Developer Platform SaaS by Giant Swarm - ISV product with Graviton support",
+      "compatibility": {
+        "supported_versions": [
+          {
+            "version_range": "",
+            "status": "compatible",
+            "notes": "ISV product in Developer Platform category with official Graviton support"
+          }
+        ],
+        "minimum_supported_version": null,
+        "recommended_version": null,
+        "documentation_links": [
+          "https://aws.amazon.com/marketplace/pp/prodview-z7ul33v35nzam)"
+        ]
+      }
+    },
+    {
+      "name": "crm: next-generation pharma crm",
+      "aliases": [
+        "proxima cloud"
+      ],
+      "description": "CRM: Next-Generation Pharma CRM by Proxima Cloud - ISV product with Graviton support",
+      "compatibility": {
+        "supported_versions": [
+          {
+            "version_range": "",
+            "status": "compatible",
+            "notes": "ISV product in Developer Platform category with official Graviton support"
+          }
+        ],
+        "minimum_supported_version": null,
+        "recommended_version": null,
+        "documentation_links": [
+          "https://proximacloud.com/)"
+        ]
+      }
+    },
+    {
+      "name": "devops and cloud implementation",
+      "aliases": [
+        "devops and cloud implementation by armakuni"
+      ],
+      "description": "DevOps and Cloud Implementation by DevOps and Cloud Implementation by Armakuni - ISV product with Graviton support",
+      "compatibility": {
+        "supported_versions": [
+          {
+            "version_range": "",
+            "status": "compatible",
+            "notes": "ISV product in Developer Platform category with official Graviton support"
+          }
+        ],
+        "minimum_supported_version": null,
+        "recommended_version": null,
+        "documentation_links": [
+          "https://www.armakuni.com/)"
+        ]
+      }
+    },
+    {
+      "name": "hardened image level 1 on amazon linux 2 (arm)",
+      "aliases": [
+        "cis"
+      ],
+      "description": "Hardened Image Level 1 on Amazon Linux 2 (ARM) by CIS - ISV product with Graviton support",
+      "compatibility": {
+        "supported_versions": [
+          {
+            "version_range": "",
+            "status": "compatible",
+            "notes": "ISV product in Hardened Images category with official Graviton support"
+          }
+        ],
+        "minimum_supported_version": null,
+        "recommended_version": null,
+        "documentation_links": [
+          "https://www.cisecurity.org/cis-hardened-images)"
+        ]
+      }
+    },
+    {
+      "name": "hardened image level 1 on ubuntu linux server 22.04 lts (arm)",
+      "aliases": [
+        "cis"
+      ],
+      "description": "Hardened Image Level 1 on Ubuntu Linux Server 22.04 LTS (ARM) by CIS - ISV product with Graviton support",
+      "compatibility": {
+        "supported_versions": [
+          {
+            "version_range": "",
+            "status": "compatible",
+            "notes": "ISV product in Hardened Images category with official Graviton support"
+          }
+        ],
+        "minimum_supported_version": null,
+        "recommended_version": null,
+        "documentation_links": [
+          "https://www.cisecurity.org/cis-hardened-images)"
+        ]
+      }
+    },
+    {
+      "name": "hardened image level 1 on amazon linux 2023 (arm)",
+      "aliases": [
+        "cis"
+      ],
+      "description": "Hardened Image Level 1 on Amazon Linux 2023 (ARM) by CIS - ISV product with Graviton support",
+      "compatibility": {
+        "supported_versions": [
+          {
+            "version_range": "",
+            "status": "compatible",
+            "notes": "ISV product in Hardened Images category with official Graviton support"
+          }
+        ],
+        "minimum_supported_version": null,
+        "recommended_version": null,
+        "documentation_links": [
+          "https://www.cisecurity.org/cis-hardened-images)"
+        ]
+      }
+    },
+    {
+      "name": "fluent<br>ls-dyna<br>redhawk-sc",
+      "aliases": [
+        "ansys"
+      ],
+      "description": "Fluent<br>LS-Dyna<br>Redhawk-SC by Ansys - ISV product with Graviton support",
+      "compatibility": {
+        "supported_versions": [
+          {
+            "version_range": "",
+            "status": "compatible",
+            "notes": "ISV product in HPC category with official Graviton support"
+          }
+        ],
+        "minimum_supported_version": null,
+        "recommended_version": null,
+        "documentation_links": [
+          "https://www.ansys.com/content/dam/amp/2023/june/quick-request/arm-64-processor-support-announcement-june-2023.pdf)](https://www.ansys.com/content/dam/amp/2023/june/quick-request/arm-64-processor-support-announcement-june-2023.pdf)",
+          "https://aws.amazon.com/blogs/hpc/application-deep-dive-into-the-graviton3e-based-amazon-ec2-hpc7g-instance/](https://aws.amazon.com/blogs/hpc/application-deep-dive-into-the-graviton3e-based-amazon-ec2-hpc7g-instance/)"
+        ]
+      }
+    },
+    {
+      "name": "cfd direct from the cloud",
+      "aliases": [
+        "cfd direct"
+      ],
+      "description": "CFD Direct From the Cloud by CFD Direct - ISV product with Graviton support",
+      "compatibility": {
+        "supported_versions": [
+          {
+            "version_range": "",
+            "status": "compatible",
+            "notes": "ISV product in HPC category with official Graviton support"
+          }
+        ],
+        "minimum_supported_version": null,
+        "recommended_version": null,
+        "documentation_links": [
+          "https://aws.amazon.com/marketplace/pp/B08CHKT98H",
+          "https://cfd.direct/cloud/cfddfc-arm-aws-c6g/"
+        ]
+      }
+    },
+    {
+      "name": "cloud - android 13.0 (arm64)",
+      "aliases": [
+        "genymotion"
+      ],
+      "description": "Cloud - Android 13.0 (arm64) by Genymotion - ISV product with Graviton support",
+      "compatibility": {
+        "supported_versions": [
+          {
+            "version_range": "",
+            "status": "compatible",
+            "notes": "ISV product in Mobile / Emulation category with official Graviton support"
+          }
+        ],
+        "minimum_supported_version": null,
+        "recommended_version": null,
+        "documentation_links": [
+          "https://www.genymotion.com/cloud/)"
+        ]
+      }
+    },
+    {
+      "name": "cloud - android 14.0 (arm64)",
+      "aliases": [
+        "genymotion"
+      ],
+      "description": "Cloud - Android 14.0 (arm64) by Genymotion - ISV product with Graviton support",
+      "compatibility": {
+        "supported_versions": [
+          {
+            "version_range": "",
+            "status": "compatible",
+            "notes": "ISV product in Mobile / Emulation category with official Graviton support"
+          }
+        ],
+        "minimum_supported_version": null,
+        "recommended_version": null,
+        "documentation_links": [
+          "https://www.genymotion.com/cloud/)"
+        ]
+      }
+    },
+    {
+      "name": "nginx plus",
+      "aliases": [
+        "f5 (nginx)"
+      ],
+      "description": "NGINX Plus by F5 (NGINX) - ISV product with Graviton support",
+      "compatibility": {
+        "supported_versions": [
+          {
+            "version_range": "",
+            "status": "compatible",
+            "notes": "ISV product in Networking category with official Graviton support"
+          }
+        ],
+        "minimum_supported_version": null,
+        "recommended_version": null,
+        "documentation_links": [
+          "https://aws.amazon.com/marketplace/pp/Nginx-Software-Inc-NGINX-Plus-Enterprise-Amazon-Li/B07RQN9ZQP",
+          "https://www.prnewswire.com/news-releases/nginx-plus-now-available-for-latest-generation-of-arm-based-64-bit-servers-665653129.html"
+        ]
+      }
+    },
+    {
+      "name": "kong gateway",
+      "aliases": [
+        "kong (api gw)"
+      ],
+      "description": "Kong Gateway by Kong (API GW) - ISV product with Graviton support",
+      "compatibility": {
+        "supported_versions": [
+          {
+            "version_range": "",
+            "status": "compatible",
+            "notes": "ISV product in Networking category with official Graviton support"
+          }
+        ],
+        "minimum_supported_version": null,
+        "recommended_version": null,
+        "documentation_links": [
+          "https://download.konghq.com/gateway-3.x-amazonlinux-2022/Packages/k/",
+          "https://konghq.com/blog/engineering/validated-aws-graviton3-al2023"
+        ]
+      }
+    },
+    {
+      "name": "proxy enterprise edition (arm)",
+      "aliases": [
+        "heimdall"
+      ],
+      "description": "Proxy Enterprise Edition (ARM) by Heimdall - ISV product with Graviton support",
+      "compatibility": {
+        "supported_versions": [
+          {
+            "version_range": "",
+            "status": "compatible",
+            "notes": "ISV product in Networking category with official Graviton support"
+          }
+        ],
+        "minimum_supported_version": null,
+        "recommended_version": null,
+        "documentation_links": [
+          "https://www.heimdalldata.com/)"
+        ]
+      }
+    },
+    {
+      "name": "proxy enterprise plus edition (arm)",
+      "aliases": [
+        "heimdall"
+      ],
+      "description": "Proxy Enterprise PLUS Edition (ARM) by Heimdall - ISV product with Graviton support",
+      "compatibility": {
+        "supported_versions": [
+          {
+            "version_range": "",
+            "status": "compatible",
+            "notes": "ISV product in Networking category with official Graviton support"
+          }
+        ],
+        "minimum_supported_version": null,
+        "recommended_version": null,
+        "documentation_links": [
+          "https://www.heimdalldata.com/)"
+        ]
+      }
+    },
+    {
+      "name": "pfsense plus firewall/vpn/router (arm64/graviton)",
+      "aliases": [
+        "netgate"
+      ],
+      "description": "pfSense Plus Firewall/VPN/Router (ARM64/Graviton) by Netgate - ISV product with Graviton support",
+      "compatibility": {
+        "supported_versions": [
+          {
+            "version_range": "",
+            "status": "compatible",
+            "notes": "ISV product in Networking category with official Graviton support"
+          }
+        ],
+        "minimum_supported_version": null,
+        "recommended_version": null,
+        "documentation_links": [
+          "https://www.netgate.com/solutions/pfsense/)"
+        ]
+      }
+    },
+    {
+      "name": "cribl logstream",
+      "aliases": [
+        "cribl"
+      ],
+      "description": "Cribl LogStream by Cribl - ISV product with Graviton support",
+      "compatibility": {
+        "supported_versions": [
+          {
+            "version_range": "",
+            "status": "compatible",
+            "notes": "ISV product in Observability category with official Graviton support"
+          }
+        ],
+        "minimum_supported_version": null,
+        "recommended_version": null,
+        "documentation_links": [
+          "https://cdn.cribl.io/dl/3.0.1/cribl-3.0.1-719ad848-linux-arm64.tgz",
+          "https://cribl.io/blog/comparing-intel-amd-and-graviton2/"
+        ]
+      }
+    },
+    {
+      "name": "datadog agent",
+      "aliases": [
+        "datadog"
+      ],
+      "description": "Datadog Agent by Datadog - ISV product with Graviton support",
+      "compatibility": {
+        "supported_versions": [
+          {
+            "version_range": "",
+            "status": "compatible",
+            "notes": "ISV product in Observability category with official Graviton support"
+          }
+        ],
+        "minimum_supported_version": null,
+        "recommended_version": null,
+        "documentation_links": [
+          "https://hub.docker.com/r/datadog/agent",
+          "https://www.datadoghq.com/blog/datadog-arm-agent/"
+        ]
+      }
+    },
+    {
+      "name": "oneagent",
+      "aliases": [
+        "dynatrace"
+      ],
+      "description": "OneAgent by Dynatrace - ISV product with Graviton support",
+      "compatibility": {
+        "supported_versions": [
+          {
+            "version_range": "",
+            "status": "compatible",
+            "notes": "ISV product in Observability category with official Graviton support"
+          }
+        ],
+        "minimum_supported_version": null,
+        "recommended_version": null,
+        "documentation_links": [
+          "https://www.dynatrace.com/support/help/setup-and-configuration/dynatrace-oneagent/oneagent-technology-support/oneagent-platform-and-capability-support-matrix/",
+          "https://www.dynatrace.com/news/blog/get-out-of-the-box-visibility-into-your-arm-platform-early-adopter/"
+        ]
+      }
+    },
+    {
+      "name": "grafana enterprise",
+      "aliases": [
+        "grafana labs"
+      ],
+      "description": "Grafana Enterprise by Grafana Labs - ISV product with Graviton support",
+      "compatibility": {
+        "supported_versions": [
+          {
+            "version_range": "",
+            "status": "compatible",
+            "notes": "ISV product in Observability category with official Graviton support"
+          }
+        ],
+        "minimum_supported_version": null,
+        "recommended_version": null,
+        "documentation_links": [
+          "https://grafana.com/grafana/download?edition=enterprise&platform=arm",
+          "https://grafana.com/docs/grafana/latest/whatsnew/whats-new-in-v5-2/#native-builds-for-arm"
+        ]
+      }
+    },
+    {
+      "name": "honeycomb (saas, including honeytail agent)",
+      "aliases": [
+        "honeycomb"
+      ],
+      "description": "Honeycomb (SaaS, including Honeytail agent) by Honeycomb - ISV product with Graviton support",
+      "compatibility": {
+        "supported_versions": [
+          {
+            "version_range": "",
+            "status": "compatible",
+            "notes": "ISV product in Observability category with official Graviton support"
+          }
+        ],
+        "minimum_supported_version": null,
+        "recommended_version": null,
+        "documentation_links": [
+          "https://www.honeycomb.io/pricing/",
+          "https://docs.honeycomb.io/getting-data-in/integrations/honeytail/"
+        ]
+      }
+    },
+    {
+      "name": "apm agents",
+      "aliases": [
+        "new relic"
+      ],
+      "description": "APM agents by New Relic - ISV product with Graviton support",
+      "compatibility": {
+        "supported_versions": [
+          {
+            "version_range": "",
+            "status": "compatible",
+            "notes": "ISV product in Observability category with official Graviton support"
+          }
+        ],
+        "minimum_supported_version": null,
+        "recommended_version": null,
+        "documentation_links": [
+          "https://docs.newrelic.com/docs/new-relic-one/install-configure/install-new-relic/#apm-install",
+          "https://docs.newrelic.com/docs/apm/agents/manage-apm-agents/configuration/support-arm-graviton-x86-64"
+        ]
+      }
+    },
+    {
+      "name": "infrastructure agent",
+      "aliases": [
+        "new relic"
+      ],
+      "description": "Infrastructure Agent by New Relic - ISV product with Graviton support",
+      "compatibility": {
+        "supported_versions": [
+          {
+            "version_range": "",
+            "status": "compatible",
+            "notes": "ISV product in Observability category with official Graviton support"
+          }
+        ],
+        "minimum_supported_version": null,
+        "recommended_version": null,
+        "documentation_links": [
+          "https://download.newrelic.com/infrastructure_agent/binaries/linux/arm64/",
+          "https://docs.newrelic.com/docs/infrastructure/install-infrastructure-agent/get-started/requirements-infrastructure-agent"
+        ]
+      }
+    },
+    {
+      "name": "enterprise: universal forwarder",
+      "aliases": [
+        "splunk"
+      ],
+      "description": "Enterprise: Universal Forwarder by Splunk - ISV product with Graviton support",
+      "compatibility": {
+        "supported_versions": [
+          {
+            "version_range": "",
+            "status": "compatible",
+            "notes": "ISV product in Observability category with official Graviton support"
+          }
+        ],
+        "minimum_supported_version": null,
+        "recommended_version": null,
+        "documentation_links": [
+          "https://www.splunk.com/en_us/download/universal-forwarder.html",
+          "https://docs.splunk.com/Documentation/Splunk/8.1.1/ReleaseNotes/MeetSplunk",
+          "https://aws.amazon.com/blogs/apn/monitoring-your-linux-workloads-on-aws-graviton-with-splunk-cloud/"
+        ]
+      }
+    },
+    {
+      "name": "collector (opentelemetry)",
+      "aliases": [
+        "sumo logic"
+      ],
+      "description": "Collector (OpenTelemetry) by Sumo Logic - ISV product with Graviton support",
+      "compatibility": {
+        "supported_versions": [
+          {
+            "version_range": "",
+            "status": "compatible",
+            "notes": "ISV product in Observability category with official Graviton support"
+          }
+        ],
+        "minimum_supported_version": null,
+        "recommended_version": null,
+        "documentation_links": [
+          "https://github.com/SumoLogic/sumologic-otel-collector/blob/main/docs/Installation.md#linux-on-arm64",
+          "https://support.sumologic.com/hc/en-us/articles/360034233293-Is-ARM64-architecture-supported-by-Sumo-Logic-collector-installer-)"
+        ]
+      }
+    },
+    {
+      "name": "aqua cloud native security platform",
+      "aliases": [
+        "aqua security"
+      ],
+      "description": "Aqua Cloud Native Security Platform by Aqua Security - ISV product with Graviton support",
+      "compatibility": {
+        "supported_versions": [
+          {
+            "version_range": "",
+            "status": "compatible",
+            "notes": "ISV product in Security category with official Graviton support"
+          }
+        ],
+        "minimum_supported_version": null,
+        "recommended_version": null,
+        "documentation_links": [
+          "https://www.aquasec.com/demo/",
+          "https://blog.aquasec.com/aqua-support-aws-graviton"
+        ]
+      }
+    },
+    {
+      "name": "open source (trivy, kube-bench)",
+      "aliases": [
+        "aqua security"
+      ],
+      "description": "Open Source (Trivy, kube-bench) by Aqua Security - ISV product with Graviton support",
+      "compatibility": {
+        "supported_versions": [
+          {
+            "version_range": "",
+            "status": "compatible",
+            "notes": "ISV product in Security category with official Graviton support"
+          }
+        ],
+        "minimum_supported_version": null,
+        "recommended_version": null,
+        "documentation_links": [
+          "https://gallery.ecr.aws/?architectures=ARM+64&verified=verified&searchTerm=aqua",
+          "https://github.com/aquasecurity/trivy/releases/",
+          "https://github.com/aquasecurity/kube-bench/releases"
+        ]
+      }
+    },
+    {
+      "name": "bloombase storesafe",
+      "aliases": [
+        "bloombase"
+      ],
+      "description": "Bloombase StoreSafe by Bloombase - ISV product with Graviton support",
+      "compatibility": {
+        "supported_versions": [
+          {
+            "version_range": "",
+            "status": "compatible",
+            "notes": "ISV product in Security category with official Graviton support"
+          }
+        ],
+        "minimum_supported_version": null,
+        "recommended_version": null,
+        "documentation_links": [
+          "https://supportal.bloombase.com",
+          "https://www.youtube.com/watch?v=WsOoR0zTgho"
+        ]
+      }
+    },
+    {
+      "name": "cis hardened images",
+      "aliases": [
+        "cis"
+      ],
+      "description": "CIS Hardened Images by CIS - ISV product with Graviton support",
+      "compatibility": {
+        "supported_versions": [
+          {
+            "version_range": "",
+            "status": "compatible",
+            "notes": "ISV product in Security category with official Graviton support"
+          }
+        ],
+        "minimum_supported_version": null,
+        "recommended_version": null,
+        "documentation_links": [
+          "https://aws.amazon.com/marketplace/seller-profile?id=dfa1e6a8-0b7b-4d35-a59c-ce272caee4fc&ref=dtl_B078SH1GP1",
+          "https://www.cisecurity.org/blog/cis-hardened-vms-on-aws-graviton2-enhancing-ec2-security/"
+        ]
+      }
+    },
+    {
+      "name": "falcon",
+      "aliases": [
+        "crowdstrike"
+      ],
+      "description": "Falcon by CrowdStrike - ISV product with Graviton support",
+      "compatibility": {
+        "supported_versions": [
+          {
+            "version_range": "",
+            "status": "compatible",
+            "notes": "ISV product in Security category with official Graviton support"
+          }
+        ],
+        "minimum_supported_version": null,
+        "recommended_version": null,
+        "documentation_links": [
+          "https://www.crowdstrike.com/endpoint-security-products/crowdstrike-falcon-faq/",
+          "https://www.crowdstrike.com/blog/join-crowdstrike-at-aws-reinvent-2019/"
+        ]
+      }
+    },
+    {
+      "name": "workload security agent",
+      "aliases": [
+        "lacework"
+      ],
+      "description": "Workload Security Agent by Lacework - ISV product with Graviton support",
+      "compatibility": {
+        "supported_versions": [
+          {
+            "version_range": "",
+            "status": "compatible",
+            "notes": "ISV product in Security category with official Graviton support"
+          }
+        ],
+        "minimum_supported_version": null,
+        "recommended_version": null,
+        "documentation_links": [
+          "https://github.com/lacework/lacework-agent-releases/releases",
+          "https://www.lacework.com/lacework-expands-security-visibility-and-automation-across-amazon-web-services/",
+          "https://support.lacework.com/hc/en-us/articles/360059603473-November-2020-Agent-Release"
+        ]
+      }
+    },
+    {
+      "name": "safeguard authentication services",
+      "aliases": [
+        "one identity"
+      ],
+      "description": "Safeguard Authentication Services by One Identity - ISV product with Graviton support",
+      "compatibility": {
+        "supported_versions": [
+          {
+            "version_range": "",
+            "status": "compatible",
+            "notes": "ISV product in Security category with official Graviton support"
+          }
+        ],
+        "minimum_supported_version": null,
+        "recommended_version": null,
+        "documentation_links": [
+          "https://support.oneidentity.com/technical-documents/safeguard-authentication-services/5.0.1/installation-guide/3#TOPIC-1559368",
+          "https://support.oneidentity.com/technical-documents/safeguard-authentication-services/5.0.1/release-notes#TOPIC-1565570"
+        ]
+      }
+    },
+    {
+      "name": "cloud agent",
+      "aliases": [
+        "qualys"
+      ],
+      "description": "Cloud Agent by Qualys - ISV product with Graviton support",
+      "compatibility": {
+        "supported_versions": [
+          {
+            "version_range": "",
+            "status": "compatible",
+            "notes": "ISV product in Security category with official Graviton support"
+          }
+        ],
+        "minimum_supported_version": null,
+        "recommended_version": null,
+        "documentation_links": [
+          "https://www.qualys.com/docs/qualys-cloud-agent-linux-install-guide.pdf",
+          "https://notifications.qualys.com/product/2020/05/26/qualys-adds-cloud-agent-linux-support-for-aws-arm-based-ec2-instances"
+        ]
+      }
+    },
+    {
+      "name": "insightvm",
+      "aliases": [
+        "rapid7"
+      ],
+      "description": "InsightVM by Rapid7 - ISV product with Graviton support",
+      "compatibility": {
+        "supported_versions": [
+          {
+            "version_range": "",
+            "status": "compatible",
+            "notes": "ISV product in Security category with official Graviton support"
+          }
+        ],
+        "minimum_supported_version": null,
+        "recommended_version": null,
+        "documentation_links": [
+          "https://aws.amazon.com/blogs/apn/how-to-deploy-a-rapid7-insightvm-scan-engine-for-aws-graviton2-based-ec2-instances/",
+          "https://aws.amazon.com/blogs/apn/how-to-deploy-a-rapid7-insightvm-scan-engine-for-aws-graviton2-based-ec2-instances/"
+        ]
+      }
+    },
+    {
+      "name": "singularity xdr",
+      "aliases": [
+        "sentinelone"
+      ],
+      "description": "Singularity XDR by SentinelOne - ISV product with Graviton support",
+      "compatibility": {
+        "supported_versions": [
+          {
+            "version_range": "",
+            "status": "compatible",
+            "notes": "ISV product in Security category with official Graviton support"
+          }
+        ],
+        "minimum_supported_version": null,
+        "recommended_version": null,
+        "documentation_links": [
+          "https://www.sentinelone.com/platform/singularity-cloud/",
+          "https://www.sentinelone.com/blog/edr-for-cloud-workloads-running-on-aws-graviton/"
+        ]
+      }
+    },
+    {
+      "name": "snyk container",
+      "aliases": [
+        "snyk"
+      ],
+      "description": "Snyk Container by Snyk - ISV product with Graviton support",
+      "compatibility": {
+        "supported_versions": [
+          {
+            "version_range": "",
+            "status": "compatible",
+            "notes": "ISV product in Security category with official Graviton support"
+          }
+        ],
+        "minimum_supported_version": null,
+        "recommended_version": null,
+        "documentation_links": [
+          "https://support.snyk.io/hc/en-us/articles/360003812538-Install-the-Snyk-CLI",
+          "https://snyk.io/blog/scanning-arm-container-images-with-snyk/"
+        ]
+      }
+    },
+    {
+      "name": "nessus (scanner, agent)",
+      "aliases": [
+        "tenable"
+      ],
+      "description": "Nessus (Scanner, Agent) by Tenable - ISV product with Graviton support",
+      "compatibility": {
+        "supported_versions": [
+          {
+            "version_range": "",
+            "status": "compatible",
+            "notes": "ISV product in Security category with official Graviton support"
+          }
+        ],
+        "minimum_supported_version": null,
+        "recommended_version": null,
+        "documentation_links": [
+          "https://www.tenable.com/downloads/nessus",
+          "https://docs.tenable.com/generalrequirements/Content/NessusScannerSoftwareRequirements.htm"
+        ]
+      }
+    },
+    {
+      "name": "linux agent",
+      "aliases": [
+        "threat stack"
+      ],
+      "description": "Linux Agent by Threat Stack - ISV product with Graviton support",
+      "compatibility": {
+        "supported_versions": [
+          {
+            "version_range": "",
+            "status": "compatible",
+            "notes": "ISV product in Security category with official Graviton support"
+          }
+        ],
+        "minimum_supported_version": null,
+        "recommended_version": null,
+        "documentation_links": [
+          "https://www.threatstack.com/resources/arm-support-solution-brief",
+          "https://www.threatstack.com/press-releases/arm-support-release"
+        ]
+      }
+    },
+    {
+      "name": "deep security: agent",
+      "aliases": [
+        "trend micro"
+      ],
+      "description": "Deep Security: Agent by Trend Micro - ISV product with Graviton support",
+      "compatibility": {
+        "supported_versions": [
+          {
+            "version_range": "",
+            "status": "compatible",
+            "notes": "ISV product in Security category with official Graviton support"
+          }
+        ],
+        "minimum_supported_version": null,
+        "recommended_version": null,
+        "documentation_links": [
+          "https://help.deepsecurity.trendmicro.com/software-long-term-support.html",
+          "https://help.deepsecurity.trendmicro.com/20_0/on-premise/agent-compatibility.html",
+          "https://cloudone.trendmicro.com/docs/workload-security/supported-features-by-platform/#amazon-linux"
+        ]
+      }
+    },
+    {
+      "name": "vmware carbon black (linux sensor)",
+      "aliases": [
+        "vmware"
+      ],
+      "description": "VMware Carbon Black (Linux Sensor) by VMware - ISV product with Graviton support",
+      "compatibility": {
+        "supported_versions": [
+          {
+            "version_range": "",
+            "status": "compatible",
+            "notes": "ISV product in Security category with official Graviton support"
+          }
+        ],
+        "minimum_supported_version": null,
+        "recommended_version": null,
+        "documentation_links": [
+          "https://docs.vmware.com/en/VMware-Carbon-Black-Cloud/services/cbc-oer-linux-sensor.pdf",
+          "https://docs.vmware.com/en/VMware-Carbon-Black-Cloud/2.14.0/rn/vmware-carbon-black-cloud-linux-sensor-2140-release-notes/index.html"
+        ]
+      }
+    },
+    {
+      "name": "wazuh (agent & manager)",
+      "aliases": [
+        "wazuh"
+      ],
+      "description": "Wazuh (Agent & Manager) by Wazuh - ISV product with Graviton support",
+      "compatibility": {
+        "supported_versions": [
+          {
+            "version_range": "",
+            "status": "compatible",
+            "notes": "ISV product in Security category with official Graviton support"
+          }
+        ],
+        "minimum_supported_version": null,
+        "recommended_version": null,
+        "documentation_links": [
+          "https://documentation.wazuh.com/4.0/installation-guide/packages-list.html",
+          "https://github.com/wazuh/wazuh/blob/4.0/CHANGELOG.md"
+        ]
+      }
+    },
+    {
+      "name": "defender for endpoint",
+      "aliases": [
+        "microsoft"
+      ],
+      "description": "Defender for Endpoint by Microsoft - ISV product with Graviton support",
+      "compatibility": {
+        "supported_versions": [
+          {
+            "version_range": "",
+            "status": "compatible",
+            "notes": "ISV product in Security category with official Graviton support"
+          }
+        ],
+        "minimum_supported_version": null,
+        "recommended_version": null,
+        "documentation_links": [
+          "https://techcommunity.microsoft.com/blog/microsoftdefenderatpblog/defender-for-endpoint-extends-support-to-arm-based-linux-servers/4364066"
+        ]
+      }
+    },
+    {
+      "name": "cribl stream (arm64)",
+      "aliases": [
+        "cribl"
+      ],
+      "description": "Cribl Stream (ARM64) by Cribl - ISV product with Graviton support",
+      "compatibility": {
+        "supported_versions": [
+          {
+            "version_range": "",
+            "status": "compatible",
+            "notes": "ISV product in Security category with official Graviton support"
+          }
+        ],
+        "minimum_supported_version": null,
+        "recommended_version": null,
+        "documentation_links": [
+          "https://aws.amazon.com/marketplace/pp/prodview-76rwg3pud2vze)"
+        ]
+      }
+    },
+    {
+      "name": "device security platform",
+      "aliases": [
+        "armis"
+      ],
+      "description": "Device Security Platform by Armis - ISV product with Graviton support",
+      "compatibility": {
+        "supported_versions": [
+          {
+            "version_range": "",
+            "status": "compatible",
+            "notes": "ISV product in Security category with official Graviton support"
+          }
+        ],
+        "minimum_supported_version": null,
+        "recommended_version": null,
+        "documentation_links": [
+          "https://aws.amazon.com/marketplace/pp/prodview-zhbfuevcbnjfw)"
+        ]
+      }
+    },
+    {
+      "name": "centrix fedramp authorized",
+      "aliases": [
+        "armis"
+      ],
+      "description": "Centrix FEDRAMP Authorized by Armis - ISV product with Graviton support",
+      "compatibility": {
+        "supported_versions": [
+          {
+            "version_range": "",
+            "status": "compatible",
+            "notes": "ISV product in Security category with official Graviton support"
+          }
+        ],
+        "minimum_supported_version": null,
+        "recommended_version": null,
+        "documentation_links": [
+          "https://www.armis.com/blog/armis-achieves-final-fedramp-authorization/)"
+        ]
+      }
+    },
+    {
+      "name": "centrix vipr pro",
+      "aliases": [
+        "armis"
+      ],
+      "description": "Centrix ViPR Pro by Armis - ISV product with Graviton support",
+      "compatibility": {
+        "supported_versions": [
+          {
+            "version_range": "",
+            "status": "compatible",
+            "notes": "ISV product in Security category with official Graviton support"
+          }
+        ],
+        "minimum_supported_version": null,
+        "recommended_version": null,
+        "documentation_links": [
+          "https://www.cdw.com/product/armis-centrix-for-vipr-pro-license-50000-99999-assets/8100105)"
+        ]
+      }
+    },
+    {
+      "name": "asset management- 15000 to 24999 assets- 1-8 network ports",
+      "aliases": [
+        "armis"
+      ],
+      "description": "Asset Management- 15000 to 24999 Assets- 1-8 Network Ports by Armis - ISV product with Graviton support",
+      "compatibility": {
+        "supported_versions": [
+          {
+            "version_range": "",
+            "status": "compatible",
+            "notes": "ISV product in Security category with official Graviton support"
+          }
+        ],
+        "minimum_supported_version": null,
+        "recommended_version": null,
+        "documentation_links": [
+          "https://www.armis.com/)"
+        ]
+      }
+    },
+    {
+      "name": "with professional services subscription",
+      "aliases": [
+        "armis"
+      ],
+      "description": "with Professional Services Subscription by Armis - ISV product with Graviton support",
+      "compatibility": {
+        "supported_versions": [
+          {
+            "version_range": "",
+            "status": "compatible",
+            "notes": "ISV product in Security category with official Graviton support"
+          }
+        ],
+        "minimum_supported_version": null,
+        "recommended_version": null,
+        "documentation_links": [
+          "https://www.armis.com/)"
+        ]
+      }
+    },
+    {
+      "name": "harmony saas",
+      "aliases": [
+        "check point"
+      ],
+      "description": "Harmony SaaS by Check Point - ISV product with Graviton support",
+      "compatibility": {
+        "supported_versions": [
+          {
+            "version_range": "",
+            "status": "compatible",
+            "notes": "ISV product in Security category with official Graviton support"
+          }
+        ],
+        "minimum_supported_version": null,
+        "recommended_version": null,
+        "documentation_links": [
+          "https://www.checkpoint.com/products/harmony/)"
+        ]
+      }
+    },
+    {
+      "name": "harmony advanced & db warden",
+      "aliases": [
+        "check point"
+      ],
+      "description": "Harmony Advanced & DB Warden by Check Point - ISV product with Graviton support",
+      "compatibility": {
+        "supported_versions": [
+          {
+            "version_range": "",
+            "status": "compatible",
+            "notes": "ISV product in Security category with official Graviton support"
+          }
+        ],
+        "minimum_supported_version": null,
+        "recommended_version": null,
+        "documentation_links": [
+          "https://www.checkpoint.com/products/harmony/)"
+        ]
+      }
+    },
+    {
+      "name": "harmony endpoint",
+      "aliases": [
+        "check point"
+      ],
+      "description": "Harmony Endpoint by Check Point - ISV product with Graviton support",
+      "compatibility": {
+        "supported_versions": [
+          {
+            "version_range": "",
+            "status": "compatible",
+            "notes": "ISV product in Security category with official Graviton support"
+          }
+        ],
+        "minimum_supported_version": null,
+        "recommended_version": null,
+        "documentation_links": [
+          "https://www.checkpoint.com/products/harmony-endpoint/)"
+        ]
+      }
+    },
+    {
+      "name": "harmony email & collaboration (avanan)",
+      "aliases": [
+        "check point"
+      ],
+      "description": "Harmony Email & Collaboration (Avanan) by Check Point - ISV product with Graviton support",
+      "compatibility": {
+        "supported_versions": [
+          {
+            "version_range": "",
+            "status": "compatible",
+            "notes": "ISV product in Security category with official Graviton support"
+          }
+        ],
+        "minimum_supported_version": null,
+        "recommended_version": null,
+        "documentation_links": [
+          "https://www.checkpoint.com/products/harmony-email-collaboration/)"
+        ]
+      }
+    },
+    {
+      "name": "fortigate next-generation firewall (arm64/graviton)",
+      "aliases": [
+        "fortinet"
+      ],
+      "description": "FortiGate Next-Generation Firewall (ARM64/Graviton) by Fortinet - ISV product with Graviton support",
+      "compatibility": {
+        "supported_versions": [
+          {
+            "version_range": "",
+            "status": "compatible",
+            "notes": "ISV product in Security category with official Graviton support"
+          }
+        ],
+        "minimum_supported_version": null,
+        "recommended_version": null,
+        "documentation_links": [
+          "https://www.fortinet.com/products/next-generation-firewall)"
+        ]
+      }
+    },
+    {
+      "name": "wafcharm for aws marketplace (subscription)",
+      "aliases": [
+        "wafcharm"
+      ],
+      "description": "WafCharm for AWS Marketplace (Subscription) by WafCharm - ISV product with Graviton support",
+      "compatibility": {
+        "supported_versions": [
+          {
+            "version_range": "",
+            "status": "compatible",
+            "notes": "ISV product in Security category with official Graviton support"
+          }
+        ],
+        "minimum_supported_version": null,
+        "recommended_version": null,
+        "documentation_links": [
+          "https://aws.amazon.com/marketplace/pp/prodview-4w2x4h4d7xq4i)"
+        ]
+      }
+    },
+    {
+      "name": "armo platform",
+      "aliases": [
+        "armo"
+      ],
+      "description": "ARMO Platform by ARMO - ISV product with Graviton support",
+      "compatibility": {
+        "supported_versions": [
+          {
+            "version_range": "",
+            "status": "compatible",
+            "notes": "ISV product in Security category with official Graviton support"
+          }
+        ],
+        "minimum_supported_version": null,
+        "recommended_version": null,
+        "documentation_links": [
+          "https://www.armosec.io/platform/)"
+        ]
+      }
+    },
+    {
+      "name": "aspm, devsecops orchestration",
+      "aliases": [
+        "armorcode"
+      ],
+      "description": "ASPM, DevSecOps Orchestration by ArmorCode - ISV product with Graviton support",
+      "compatibility": {
+        "supported_versions": [
+          {
+            "version_range": "",
+            "status": "compatible",
+            "notes": "ISV product in Security category with official Graviton support"
+          }
+        ],
+        "minimum_supported_version": null,
+        "recommended_version": null,
+        "documentation_links": [
+          "https://www.armorcode.com/devsecops)"
+        ]
+      }
+    },
+    {
+      "name": "threatalert® ato accelerator for fedramp, fisma, and cmmc",
+      "aliases": [
+        "stackarmor"
+      ],
+      "description": "ThreatAlert® ATO Accelerator for FedRAMP, FISMA, and CMMC by stackArmor - ISV product with Graviton support",
+      "compatibility": {
+        "supported_versions": [
+          {
+            "version_range": "",
+            "status": "compatible",
+            "notes": "ISV product in Compliance & Security category with official Graviton support"
+          }
+        ],
+        "minimum_supported_version": null,
+        "recommended_version": null,
+        "documentation_links": [
+          "https://www.stackarmor.com/)"
+        ]
+      }
+    },
+    {
+      "name": "minio",
+      "aliases": [],
+      "description": "MinIO by MinIO - ISV product with Graviton support",
+      "compatibility": {
+        "supported_versions": [
+          {
+            "version_range": "",
+            "status": "compatible",
+            "notes": "ISV product in Storage category with official Graviton support"
+          }
+        ],
+        "minimum_supported_version": null,
+        "recommended_version": null,
+        "documentation_links": [
+          "https://min.io/download#/linux",
+          "https://github.com/minio/minio/releases/tag/RELEASE.2020-06-12T00-06-19Z"
+        ]
+      }
+    }
+  ]
+}

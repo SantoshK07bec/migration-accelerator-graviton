@@ -1,0 +1,173 @@
+{
+  "express": {
+    "default_status": "compatible",
+    "notes": "Express.js is pure JavaScript and fully compatible with ARM64",
+    "recommendations": ["No special considerations needed for ARM64"],
+    "version_ranges": [
+      {
+        "range": "*",
+        "status": "compatible",
+        "notes": "Pure JavaScript framework"
+      }
+    ]
+  },
+  "lodash": {
+    "default_status": "compatible",
+    "notes": "Lodash is pure JavaScript utility library",
+    "recommendations": ["Fully compatible with ARM64"],
+    "version_ranges": [
+      {
+        "range": "*",
+        "status": "compatible",
+        "notes": "Pure JavaScript utilities"
+      }
+    ]
+  },
+  "react": {
+    "default_status": "compatible",
+    "notes": "React is pure JavaScript and ARM64 compatible",
+    "recommendations": ["No ARM64-specific considerations"],
+    "version_ranges": [
+      {
+        "range": "*",
+        "status": "compatible",
+        "notes": "Pure JavaScript library"
+      }
+    ]
+  },
+  "bcrypt": {
+    "default_status": "compatible",
+    "notes": "bcrypt provides prebuilt ARM64 binaries",
+    "recommendations": ["Use latest version for best ARM64 support"],
+    "version_ranges": [
+      {
+        "range": ">=5.0.0",
+        "status": "compatible",
+        "notes": "ARM64 prebuilt binaries available"
+      },
+      {
+        "range": "<5.0.0",
+        "status": "unknown",
+        "notes": "May require compilation"
+      }
+    ]
+  },
+  "sharp": {
+    "default_status": "compatible",
+    "notes": "Sharp image processing library supports ARM64",
+    "recommendations": ["Use version 0.28.0 or later for ARM64"],
+    "version_ranges": [
+      {
+        "range": ">=0.28.0",
+        "status": "compatible",
+        "notes": "ARM64 prebuilt binaries"
+      },
+      {
+        "range": "<0.28.0",
+        "status": "unknown",
+        "notes": "May need libvips compilation"
+      }
+    ]
+  },
+  "sqlite3": {
+    "default_status": "compatible",
+    "notes": "SQLite3 Node.js binding supports ARM64",
+    "recommendations": ["Use latest version for ARM64 prebuilt binaries"],
+    "version_ranges": [
+      {
+        "range": ">=5.0.0",
+        "status": "compatible",
+        "notes": "ARM64 prebuilt binaries available"
+      }
+    ]
+  },
+  "node-sass": {
+    "default_status": "incompatible",
+    "notes": "node-sass is deprecated, use sass (Dart Sass) instead",
+    "recommendations": ["Migrate to 'sass' package for better ARM64 support"],
+    "version_ranges": [
+      {
+        "range": "*",
+        "status": "incompatible",
+        "notes": "Use 'sass' package instead"
+      }
+    ]
+  },
+  "sass": {
+    "default_status": "compatible",
+    "notes": "Dart Sass is pure JavaScript and ARM64 compatible",
+    "recommendations": ["Preferred over node-sass for ARM64"],
+    "version_ranges": [
+      {
+        "range": "*",
+        "status": "compatible",
+        "notes": "Pure JavaScript implementation"
+      }
+    ]
+  },
+  "puppeteer": {
+    "default_status": "compatible",
+    "notes": "Puppeteer supports ARM64 with Chromium",
+    "recommendations": ["Use latest version for ARM64 Chromium support"],
+    "version_ranges": [
+      {
+        "range": ">=13.0.0",
+        "status": "compatible",
+        "notes": "ARM64 Chromium binaries available"
+      },
+      {
+        "range": "<13.0.0",
+        "status": "unknown",
+        "notes": "May need custom Chromium build"
+      }
+    ]
+  },
+  "canvas": {
+    "default_status": "unknown",
+    "notes": "Canvas requires native dependencies that may need ARM64 compilation",
+    "recommendations": ["Test compilation with Cairo and Pango libraries"],
+    "version_ranges": [
+      {
+        "range": "*",
+        "status": "unknown",
+        "notes": "Requires Cairo, Pango, and other native libraries"
+      }
+    ]
+  },
+  "grpc": {
+    "default_status": "compatible",
+    "notes": "gRPC Node.js supports ARM64",
+    "recommendations": ["Use @grpc/grpc-js for pure JavaScript implementation"],
+    "version_ranges": [
+      {
+        "range": ">=1.24.0",
+        "status": "compatible",
+        "notes": "ARM64 prebuilt binaries"
+      }
+    ]
+  },
+  "@grpc/grpc-js": {
+    "default_status": "compatible",
+    "notes": "Pure JavaScript gRPC implementation, fully ARM64 compatible",
+    "recommendations": ["Preferred over native grpc for ARM64"],
+    "version_ranges": [
+      {
+        "range": "*",
+        "status": "compatible",
+        "notes": "Pure JavaScript implementation"
+      }
+    ]
+  },
+  "fsevents": {
+    "default_status": "unknown",
+    "notes": "fsevents is macOS-specific and not used on Linux ARM64",
+    "recommendations": ["No action needed for Linux ARM64 deployment"],
+    "version_ranges": [
+      {
+        "range": "*",
+        "status": "compatible",
+        "notes": "macOS-specific package - not used on Linux ARM64"
+      }
+    ]
+  }
+}

@@ -1,0 +1,187 @@
+{
+  "Newtonsoft.Json": {
+    "default_status": "compatible",
+    "notes": "Pure managed .NET library, fully compatible with ARM64",
+    "recommendations": ["No special considerations needed for ARM64"],
+    "version_ranges": [
+      {
+        "range": "*",
+        "status": "compatible",
+        "notes": "Pure managed assembly"
+      }
+    ]
+  },
+  "System.Text.Json": {
+    "default_status": "compatible",
+    "notes": "Built-in .NET JSON library with ARM64 support",
+    "recommendations": ["Preferred JSON library for .NET 5+ on ARM64"],
+    "version_ranges": [
+      {
+        "range": "*",
+        "status": "compatible",
+        "notes": "Part of .NET runtime with ARM64 optimizations"
+      }
+    ]
+  },
+  "Microsoft.EntityFrameworkCore": {
+    "default_status": "compatible",
+    "notes": "Entity Framework Core supports ARM64",
+    "recommendations": ["Use .NET 5+ for best ARM64 performance"],
+    "version_ranges": [
+      {
+        "range": ">=5.0.0",
+        "status": "compatible",
+        "notes": "Full ARM64 support in .NET 5+"
+      },
+      {
+        "range": "<5.0.0",
+        "status": "unknown",
+        "notes": "Limited ARM64 testing in older versions"
+      }
+    ]
+  },
+  "Microsoft.AspNetCore.App": {
+    "default_status": "compatible",
+    "notes": "ASP.NET Core fully supports ARM64",
+    "recommendations": ["Use .NET 6+ for optimal ARM64 performance"],
+    "version_ranges": [
+      {
+        "range": ">=5.0.0",
+        "status": "compatible",
+        "notes": "Native ARM64 support"
+      }
+    ]
+  },
+  "Serilog": {
+    "default_status": "compatible",
+    "notes": "Serilog logging library is pure managed code",
+    "recommendations": ["All sinks should be tested for ARM64 compatibility"],
+    "version_ranges": [
+      {
+        "range": "*",
+        "status": "compatible",
+        "notes": "Pure managed logging library"
+      }
+    ]
+  },
+  "AutoMapper": {
+    "default_status": "compatible",
+    "notes": "AutoMapper is pure managed code and ARM64 compatible",
+    "recommendations": ["No special ARM64 considerations"],
+    "version_ranges": [
+      {
+        "range": "*",
+        "status": "compatible",
+        "notes": "Pure managed object mapping"
+      }
+    ]
+  },
+  "FluentValidation": {
+    "default_status": "compatible",
+    "notes": "FluentValidation is pure managed code",
+    "recommendations": ["Fully compatible with ARM64"],
+    "version_ranges": [
+      {
+        "range": "*",
+        "status": "compatible",
+        "notes": "Pure managed validation library"
+      }
+    ]
+  },
+  "Npgsql": {
+    "default_status": "compatible",
+    "notes": "Npgsql PostgreSQL driver supports ARM64",
+    "recommendations": ["Use latest version for best ARM64 support"],
+    "version_ranges": [
+      {
+        "range": ">=5.0.0",
+        "status": "compatible",
+        "notes": "Full ARM64 support"
+      }
+    ]
+  },
+  "Microsoft.Data.SqlClient": {
+    "default_status": "compatible",
+    "notes": "SQL Server client library supports ARM64",
+    "recommendations": ["Use with .NET 5+ for ARM64"],
+    "version_ranges": [
+      {
+        "range": ">=3.0.0",
+        "status": "compatible",
+        "notes": "ARM64 support in .NET 5+"
+      }
+    ]
+  },
+  "StackExchange.Redis": {
+    "default_status": "compatible",
+    "notes": "Redis client library is pure managed code",
+    "recommendations": ["Fully compatible with ARM64"],
+    "version_ranges": [
+      {
+        "range": "*",
+        "status": "compatible",
+        "notes": "Pure managed Redis client"
+      }
+    ]
+  },
+  "MongoDB.Driver": {
+    "default_status": "compatible",
+    "notes": "MongoDB .NET driver supports ARM64",
+    "recommendations": ["Use latest version for ARM64 optimizations"],
+    "version_ranges": [
+      {
+        "range": ">=2.13.0",
+        "status": "compatible",
+        "notes": "ARM64 support confirmed"
+      }
+    ]
+  },
+  "System.Drawing.Common": {
+    "default_status": "unknown",
+    "notes": "System.Drawing.Common has native dependencies on Linux",
+    "recommendations": ["Consider SkiaSharp or ImageSharp for cross-platform graphics"],
+    "version_ranges": [
+      {
+        "range": "*",
+        "status": "unknown",
+        "notes": "Requires libgdiplus on Linux ARM64"
+      }
+    ]
+  },
+  "SkiaSharp": {
+    "default_status": "compatible",
+    "notes": "SkiaSharp provides ARM64 native libraries",
+    "recommendations": ["Preferred graphics library for ARM64 deployment"],
+    "version_ranges": [
+      {
+        "range": ">=2.80.0",
+        "status": "compatible",
+        "notes": "ARM64 native libraries included"
+      }
+    ]
+  },
+  "SixLabors.ImageSharp": {
+    "default_status": "compatible",
+    "notes": "ImageSharp is pure managed code for image processing",
+    "recommendations": ["Excellent ARM64 alternative to System.Drawing"],
+    "version_ranges": [
+      {
+        "range": "*",
+        "status": "compatible",
+        "notes": "Pure managed image processing"
+      }
+    ]
+  },
+  "Microsoft.ML": {
+    "default_status": "compatible",
+    "notes": "ML.NET supports ARM64 with some limitations",
+    "recommendations": ["Test ML models thoroughly on ARM64"],
+    "version_ranges": [
+      {
+        "range": ">=1.7.0",
+        "status": "compatible",
+        "notes": "ARM64 support with performance considerations"
+      }
+    ]
+  }
+}

@@ -1,0 +1,49 @@
+# Sample Runtime Configuration for Multi-Runtime Dependency Analysis
+# This file demonstrates how to configure OS and runtime version overrides
+
+# Default versions used when no SBOM detection or override is available
+default_versions:
+  os_version: "amazon-linux-2023"
+  python: "3.11"
+  nodejs: "20.10.0"
+  dotnet: "8.0"
+  ruby: "3.2"
+  java: "17"
+
+# SBOM-specific overrides
+# Use the SBOM filename (without path) as the key
+sbom_overrides:
+  # Example: Override for a specific application SBOM
+  "my-python-app-sbom.json":
+    os_version: "ubuntu-20.04"
+    runtimes:
+      python: "3.9"
+      nodejs: "18.17.0"
+  
+  # Example: Override for a .NET application
+  "dotnet-service-sbom.json":
+    os_version: "ubuntu-22.04"
+    runtimes:
+      dotnet: "6.0"
+  
+  # Example: Override for a Ruby on Rails application
+  "rails-app-sbom.json":
+    os_version: "amazon-linux-2023"
+    runtimes:
+      ruby: "3.1"
+      nodejs: "18.0.0"  # For asset pipeline
+  
+  # Example: Multi-runtime microservice
+  "microservice-sbom.json":
+    os_version: "ubuntu-20.04"
+    runtimes:
+      java: "11"
+      python: "3.8"
+      nodejs: "16.20.0"
+
+# Configuration Notes:
+# 1. Priority order: Override config → SBOM detected → Default config → Latest stable
+# 2. OS versions should be Graviton-compatible (Amazon Linux, Ubuntu, Debian, RHEL, etc.)
+# 3. Runtime versions should be ARM64-compatible versions
+# 4. If a detected version is not Graviton-compatible, the override or default will be used
+# 5. SBOM filename matching is case-sensitive and should include the .json extension
