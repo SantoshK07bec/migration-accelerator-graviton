@@ -25,10 +25,22 @@ cd migration-accelerator-graviton
 ./deploy.sh
 
 # The deploy script automatically:
+# - Creates/manages Terraform state bucket
 # - Deploys Terraform infrastructure
 # - Enables S3 EventBridge notifications
 # - Verifies deployment
 # - Shows usage instructions
+
+# Alternative: Use existing state bucket
+./deploy.sh deploy --state-bucket my-existing-bucket
+
+# Manual deployment (requires state bucket)
+cd terraform
+terraform init \
+  -backend-config="bucket=my-terraform-state-bucket" \
+  -backend-config="region=us-east-1"
+terraform apply
+cd ..
 ```
 
 ### Step 2: Upload Your Files

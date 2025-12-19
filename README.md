@@ -123,18 +123,26 @@ This generates CycloneDX SBOM files that you can then analyze with the compatibi
 #### Step 1: Deploy Infrastructure
 
 ```bash
-# Deploy everything with one command
+# Deploy everything with one command (recommended)
 ./deploy.sh
 
 # The deploy script automatically:
+# - Creates/manages Terraform state bucket
 # - Deploys Terraform infrastructure
 # - Enables S3 EventBridge notifications
 # - Verifies deployment
 # - Shows usage instructions
 
-# Or manual deployment
+# Use existing state bucket
+./deploy.sh deploy --state-bucket my-existing-bucket
+
+# Or manual deployment (requires state bucket)
 cd terraform
-terraform init && terraform apply
+# You must provide a state bucket for remote state storage
+terraform init \
+  -backend-config="bucket=my-terraform-state-bucket" \
+  -backend-config="region=us-east-1"
+terraform apply
 
 # Enable S3 EventBridge notifications (required for triggering)
 BUCKET=$(terraform output -raw s3_bucket_name)

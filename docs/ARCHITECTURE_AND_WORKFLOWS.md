@@ -286,13 +286,25 @@ S3 Upload → EventBridge → Lambda → AWS Batch → EC2 (Graviton3) → S3 Re
 ### Deployment
 
 ```bash
-# Deploy infrastructure
+# Deploy infrastructure with auto-managed state bucket
 ./deploy.sh
 
+# Or use existing state bucket
+./deploy.sh deploy --state-bucket my-existing-bucket
+
 # Automatically handles:
+# - Terraform state bucket creation/management
 # - Terraform deployment
 # - EventBridge configuration
 # - Verification
+
+# Manual deployment (requires state bucket)
+cd terraform
+terraform init \
+  -backend-config="bucket=my-terraform-state-bucket" \
+  -backend-config="region=us-east-1"
+terraform apply
+cd ..
 ```
 
 ### Usage Modes
